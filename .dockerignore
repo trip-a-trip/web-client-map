@@ -1,0 +1,8 @@
+Dockerfile
+*.log
+.yarn/unplugged
+.yarn/install-state.gz
+public/build
+.env
+.env.dist
+public/build

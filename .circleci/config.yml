@@ -1,0 +1,36 @@
+version: 2.1
+orbs:
+  docker: checkmoney/docker@1.1.0
+  deploy: checkmoney/deploy@1.2.3
+workflows:
+  version: 2
+  build:
+    jobs:
+      - docker/build_push:
+          org_name: 'tripatrip'
+          image_name: 'web-client-map'
+          image_version: CIRCLE_TAG
+          docker_username: DOCKER_USERNAME
+          docker_password: DOCKER_PASSWORD
+          filters:
+            branches:
+              only: master
+            tags:
+              only: /.*/
+      - deploy/roll_out:
+          notify_user: '-488110451'
+          ssh_user: SSH_USER
+          ssh_host: SSH_HOST
+          org_name: 'tripatrip'
+          image_name: 'web-client-map'
+          image_version: CIRCLE_TAG
+          path_to_app: PATH_TO_APP
+          apply_post_install: false
+          container_name: 'web_client_map'
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              ignore: /.*/
+          requires:
+            - docker/build_push
