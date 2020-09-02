@@ -27,4 +27,4 @@ gateway.use(cache);
 
 gateway.get("/api/venues", (req, res) => proxy(req, res, "/docs", {}));
 
-gateway.start(8080);
+gateway.start(config.isProd() ? 80 : 8080);
