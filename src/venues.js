@@ -1,5 +1,16 @@
-import { createStore } from "effector";
+import axios from "redaxios";
+import { restore, createEffect } from "effector";
 
-const $venues = createStore([]);
+const fetchVenuesFx = createEffect({
+  handler: async () => {
+    const { data } = await axios.get(
+      "https://venues.kamyshev.me/api/venue/list"
+    );
 
-export { $venues };
+    return data;
+  },
+});
+
+const venues = restore(fetchVenuesFx, []);
+
+export { venues, fetchVenuesFx };
