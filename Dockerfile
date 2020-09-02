@@ -6,6 +6,6 @@ COPY . .
 RUN yarn
 RUN yarn build
 
-EXPOSE 8080
+EXPOSE 80
 
 CMD ["yarn", "node", "./proxy.js"]
