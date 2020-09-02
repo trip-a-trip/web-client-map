@@ -1,6 +1,6 @@
 <script>
-  import * as Leaflet from "leaflet";
-  import "leaflet/dist/leaflet.css";
+  import * as Leaflet from 'leaflet';
+  import 'leaflet/dist/leaflet.css';
 
   const PHUKET_COORDINATES = [7.9519, 98.3381];
   const DEFAULT_ZOOM = 8;
@@ -14,7 +14,7 @@
     }).setView(PHUKET_COORDINATES, DEFAULT_ZOOM);
 
     Leaflet.tileLayer(
-      "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+      'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     ).addTo(map);
 
     return {
@@ -31,44 +31,43 @@
   }
 
   function handleZoomInClick() {
-    map.zoomIn()
+    map.zoomIn();
   }
 
   function handleZoomOutClick() {
-    map.zoomOut()
+    map.zoomOut();
   }
 </script>
 
 <style>
   .map {
-    z-index: 1;
-    width: 100vw;
-    height: 100vh;
     position: absolute;
     top: 0px;
     left: 0px;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
   }
 
   .controls {
     position: absolute;
-    z-index: 2;
 
     right: 32px;
     bottom: 32px;
+    z-index: 2;
 
     display: grid;
     grid-template-rows: repeat(3, 1fr);
 
     gap: 8px;
   }
-  
-  .controls > * {
-    background-color: white;
 
+  .controls > * {
     width: 32px;
     height: 32px;
-    border-radius: 32px;
+    background-color: white;
     border: none;
+    border-radius: 32px;
   }
 </style>
 

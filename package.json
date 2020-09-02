@@ -7,7 +7,12 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public"
+    "start": "sirv public",
+    "pretty": "yarn prettier --write --plugin=prettier-plugin-svelte ./**/*.{js,svelte}",
+    "commit": "yarn git-cz",
+    "lint:code": "yarn eslint \"./**/*.{js,svelte}\"",
+    "lint:styles": "yarn stylelint \"./**/*.svelte\"",
+    "release": "yarn standard-version"
   },
   "dependencies": {
     "@rollup/plugin-commonjs": "^15.0.0",
@@ -28,6 +33,53 @@
     "svelte": "^3.24.1"
   },
   "devDependencies": {
-    "sirv-cli": "^1.0.6"
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "babel-eslint": "^10.1.0",
+    "commitizen": "^4.0.4",
+    "cz-conventional-changelog": "^3.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-import-resolver-node": "latest",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-import-helpers": "^1.0.2",
+    "eslint-plugin-svelte3": "^2.7.3",
+    "eslint-plugin-unicorn": "^18.0.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.1.3",
+    "prettier": "^2.0.4",
+    "prettier-plugin-svelte": "^1.2.0",
+    "sirv-cli": "^1.0.6",
+    "standard-version": "^7.1.0",
+    "stylelint": "^13.3.1",
+    "stylelint-config-recess-order": "^2.0.4",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-order": "^4.1.0"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.{tsx,ts,js,jsx,scss,css,js,json,md}": [
+      "yarn prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint-staged",
+      "commit-msg": "yarn commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }

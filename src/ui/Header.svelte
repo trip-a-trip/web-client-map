@@ -4,21 +4,21 @@
 
 <style>
   h1 {
-    font-weight: 600;
     font-size: 34px;
+    font-weight: 600;
     line-height: 41px;
     color: var(--black);
   }
 
   header {
-    z-index: 2;
-    background-color: white;
     position: absolute;
     top: 16px;
     right: 16px;
-    border-radius: 4px;
-    padding-left: 32px;
+    z-index: 2;
     padding-right: 32px;
+    padding-left: 32px;
+    background-color: white;
+    border-radius: 4px;
   }
 
   @media (max-width: 640px) {

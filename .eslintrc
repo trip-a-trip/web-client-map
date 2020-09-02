@@ -1,0 +1,45 @@
+{
+  "plugins": ["unicorn", "eslint-plugin-import-helpers", "svelte3"],
+  "extends": ["airbnb-base", "plugin:unicorn/recommended", "prettier"],
+  "overrides": [
+    {
+      "files": ["*.svelte"],
+      "processor": "svelte3/svelte3"
+    }
+  ],
+  "rules": {
+    "no-undef": 0,
+    "no-restricted-syntax": 0,
+    "class-methods-use-this": 0,
+    "unicorn/prefer-spread": 0,
+    "unicorn/filename-case": 0,
+    "unicorn/prevent-abbreviations": 0,
+    "unicorn/prefer-query-selector": 0,
+    "unicorn/prefer-number-properties": 0,
+    "import/no-unresolved": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/prefer-default-export": 0,
+    "import/extensions": 0,
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": ["module", ["parent", "sibling", "index"]],
+        "alphabetize": {
+          "order": "ignore",
+          "ignoreCase": true
+        }
+      }
+    ],
+    "import/first": 0
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "legacyDecorators": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  }
+}

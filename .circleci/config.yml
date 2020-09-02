@@ -1,11 +1,28 @@
 version: 2.1
 orbs:
+  yarn: checkmoney/yarn@1.0.0
   docker: checkmoney/docker@1.1.0
   deploy: checkmoney/deploy@1.2.3
 workflows:
   version: 2
   build:
     jobs:
+      - yarn/local:
+          name: eslint
+          command: 'lint:code'
+          filters:
+            branches:
+              only: /.*/
+            tags:
+              only: /.*/
+      - yarn/local:
+          name: stylelint
+          command: 'lint:styles'
+          filters:
+            branches:
+              only: /.*/
+            tags:
+              only: /.*/
       - docker/build_push:
           org_name: 'tripatrip'
           image_name: 'web-client-map'
@@ -17,6 +34,9 @@ workflows:
               only: master
             tags:
               only: /.*/
+          requires:
+            - eslint
+            - stylelint
       - deploy/roll_out:
           notify_user: '-488110451'
           ssh_user: SSH_USER
