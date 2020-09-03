@@ -41,13 +41,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/config-conventional", "npm:8.3.4"],
             ["@rollup/plugin-commonjs", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:15.0.0"],
             ["@rollup/plugin-node-resolve", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:9.0.0"],
+            ["@rollup/plugin-replace", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:2.3.3"],
             ["@size-limit/file", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:4.5.7"],
             ["@solid-soda/config", "npm:2.2.0"],
+            ["@storeon/svelte", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:1.0.0"],
             ["@yarnpkg/pnpify", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:2.2.1"],
             ["babel-eslint", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:10.1.0"],
             ["commitizen", "npm:4.2.1"],
             ["cz-conventional-changelog", "npm:3.3.0"],
-            ["effector", "npm:21.2.2"],
             ["eslint", "npm:6.8.0"],
             ["eslint-config-airbnb-base", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:14.2.0"],
             ["eslint-config-prettier", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:6.11.0"],
@@ -73,6 +74,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["sirv-cli", "npm:1.0.6"],
             ["size-limit", "npm:4.5.7"],
             ["standard-version", "npm:7.1.0"],
+            ["storeon", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:3.0.3"],
             ["stylelint", "npm:13.7.0"],
             ["stylelint-config-recess-order", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:2.1.0"],
             ["stylelint-config-recommended", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:3.0.0"],
@@ -640,6 +642,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@rollup/plugin-replace", [
+        ["virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:2.3.3", {
+          "packageLocation": "./.yarn/$$virtual/@rollup-plugin-replace-virtual-4f01fb768e/0/cache/@rollup-plugin-replace-npm-2.3.3-ca49948ae3-d08a514b8f.zip/node_modules/@rollup/plugin-replace/",
+          "packageDependencies": [
+            ["@rollup/plugin-replace", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:2.3.3"],
+            ["@rollup/pluginutils", "virtual:26a9d215883651ce61807780492d7d46fda57d355420419da891a48bfca35d2a2092d16f2d272ea7a22c5d83d2d736972b591b153fe556b2c69ee27e68350110#npm:3.1.0"],
+            ["@types/rollup", null],
+            ["magic-string", "npm:0.25.7"],
+            ["rollup", "npm:2.26.9"]
+          ],
+          "packagePeers": [
+            "@types/rollup",
+            "rollup"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@rollup/pluginutils", [
         ["virtual:26a9d215883651ce61807780492d7d46fda57d355420419da891a48bfca35d2a2092d16f2d272ea7a22c5d83d2d736972b591b153fe556b2c69ee27e68350110#npm:3.1.0", {
           "packageLocation": "./.yarn/$$virtual/@rollup-pluginutils-virtual-55b236a356/0/cache/@rollup-pluginutils-npm-3.1.0-b44b222e7d-45da6411e0.zip/node_modules/@rollup/pluginutils/",
@@ -691,6 +710,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["change-case", "npm:3.1.0"],
             ["dotenv", "npm:6.2.0"],
             ["nanoption", "npm:1.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@storeon/svelte", [
+        ["virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:1.0.0", {
+          "packageLocation": "./.yarn/$$virtual/@storeon-svelte-virtual-d56a7aa7c0/0/cache/@storeon-svelte-npm-1.0.0-e493a3f678-cf478dfc74.zip/node_modules/@storeon/svelte/",
+          "packageDependencies": [
+            ["@storeon/svelte", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:1.0.0"],
+            ["@types/storeon", null],
+            ["@types/svelte", null],
+            ["storeon", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:3.0.3"],
+            ["svelte", "npm:3.24.1"]
+          ],
+          "packagePeers": [
+            "@types/storeon",
+            "@types/svelte",
+            "storeon",
+            "svelte"
           ],
           "linkType": "HARD",
         }]
@@ -3507,15 +3545,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/ee-first-npm-1.1.1-33f8535b39-ba74f91398.zip/node_modules/ee-first/",
           "packageDependencies": [
             ["ee-first", "npm:1.1.1"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["effector", [
-        ["npm:21.2.2", {
-          "packageLocation": "./.yarn/cache/effector-npm-21.2.2-8db4182f9f-29df829b8e.zip/node_modules/effector/",
-          "packageDependencies": [
-            ["effector", "npm:21.2.2"]
           ],
           "linkType": "HARD",
         }]
@@ -10363,6 +10392,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["storeon", [
+        ["virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:3.0.3", {
+          "packageLocation": "./.yarn/$$virtual/storeon-virtual-630731b4da/0/cache/storeon-npm-3.0.3-95334ae481-b04e0fb30d.zip/node_modules/storeon/",
+          "packageDependencies": [
+            ["storeon", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:3.0.3"],
+            ["@types/preact", null],
+            ["@types/react", null],
+            ["preact", null],
+            ["react", null]
+          ],
+          "packagePeers": [
+            "@types/preact",
+            "@types/react",
+            "preact",
+            "react"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["stream-buffers", [
         ["npm:3.0.2", {
           "packageLocation": "./.yarn/cache/stream-buffers-npm-3.0.2-81e4221c31-340a04fc13.zip/node_modules/stream-buffers/",
@@ -11647,13 +11695,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/config-conventional", "npm:8.3.4"],
             ["@rollup/plugin-commonjs", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:15.0.0"],
             ["@rollup/plugin-node-resolve", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:9.0.0"],
+            ["@rollup/plugin-replace", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:2.3.3"],
             ["@size-limit/file", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:4.5.7"],
             ["@solid-soda/config", "npm:2.2.0"],
+            ["@storeon/svelte", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:1.0.0"],
             ["@yarnpkg/pnpify", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:2.2.1"],
             ["babel-eslint", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:10.1.0"],
             ["commitizen", "npm:4.2.1"],
             ["cz-conventional-changelog", "npm:3.3.0"],
-            ["effector", "npm:21.2.2"],
             ["eslint", "npm:6.8.0"],
             ["eslint-config-airbnb-base", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:14.2.0"],
             ["eslint-config-prettier", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:6.11.0"],
@@ -11679,6 +11728,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["sirv-cli", "npm:1.0.6"],
             ["size-limit", "npm:4.5.7"],
             ["standard-version", "npm:7.1.0"],
+            ["storeon", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:3.0.3"],
             ["stylelint", "npm:13.7.0"],
             ["stylelint-config-recess-order", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:2.1.0"],
             ["stylelint-config-recommended", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:3.0.0"],

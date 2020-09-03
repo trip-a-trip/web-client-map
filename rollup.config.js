@@ -1,6 +1,7 @@
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+import replace from '@rollup/plugin-replace';
 import livereload from 'rollup-plugin-livereload';
 import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
@@ -60,6 +61,11 @@ export default {
     commonjs(),
     postcss({
       plugins: [],
+    }),
+    replace({
+      'process.env.NODE_ENV': JSON.stringify(
+        production ? 'production' : 'development',
+      ),
     }),
 
     // In dev mode, call `npm run start` once

@@ -509,7 +509,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/pluginutils@npm:^3.1.0":
+"@rollup/plugin-replace@npm:^2.3.3":
+  version: 2.3.3
+  resolution: "@rollup/plugin-replace@npm:2.3.3"
+  dependencies:
+    "@rollup/pluginutils": ^3.0.8
+    magic-string: ^0.25.5
+  peerDependencies:
+    rollup: ^1.20.0 || ^2.0.0
+  checksum: d08a514b8f446a3fe3db7e9de7d1a57c4aaeaaa3d6f70c2e18925d893ed81480dbfd29fe939f61c1ef31194b036ab7b1df22a744ffd33196335f9fa1925d3c22
+  languageName: node
+  linkType: hard
+
+"@rollup/pluginutils@npm:^3.0.8, @rollup/pluginutils@npm:^3.1.0":
   version: 3.1.0
   resolution: "@rollup/pluginutils@npm:3.1.0"
   dependencies:
@@ -548,6 +560,16 @@ __metadata:
     dotenv: ^6.2.0
     nanoption: ^1.0.1
   checksum: 438e9e93b01aa17f1ffacb693f26e1a267bac6f6f3937f6afa67d0ba5531d409015a4b0c52a38f517c35a4c75d35c0388baccad2635f0afd82a1b0cfa83ec60f
+  languageName: node
+  linkType: hard
+
+"@storeon/svelte@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@storeon/svelte@npm:1.0.0"
+  peerDependencies:
+    storeon: ^3.0.0
+    svelte: ^3.20.0
+  checksum: cf478dfc74e21ca7aecd35ef4e4225920ef89cdff66a21c1b5e81f00b1f8a0d014760bcb83fe24276f5d3e112355874eb07c0d664fbda277e650bfec08c62aaf
   languageName: node
   linkType: hard
 
@@ -3051,13 +3073,6 @@ __metadata:
   version: 1.1.1
   resolution: "ee-first@npm:1.1.1"
   checksum: ba74f91398e3ee3b6d665b2f0d13ad6530e89a7e64ec886a6eec0602fb8a5a274652960e21bd5d4b42fdeb9017d873ff872f50342d38779e955285977edb337c
-  languageName: node
-  linkType: hard
-
-"effector@npm:^21.2.2":
-  version: 21.2.2
-  resolution: "effector@npm:21.2.2"
-  checksum: 29df829b8ed78113c12eb9b6e066d623784f7e9caa6a76df715a70867edb44c20ea22f93b61fddd39b025fd877047a907ad136fe62fed23cffa258c2ae3eecb0
   languageName: node
   linkType: hard
 
@@ -6026,7 +6041,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"magic-string@npm:^0.25.7":
+"magic-string@npm:^0.25.5, magic-string@npm:^0.25.7":
   version: 0.25.7
   resolution: "magic-string@npm:0.25.7"
   dependencies:
@@ -9203,6 +9218,21 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"storeon@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "storeon@npm:3.0.3"
+  peerDependencies:
+    preact: ^10.0.0
+    react: ^16.8.0
+  peerDependenciesMeta:
+    preact:
+      optional: true
+    react:
+      optional: true
+  checksum: b04e0fb30d69015648f8b17e23cf913885064b96b408bd89e60b6d6e5d2673c44b62ba70b1cac0587b237ba83a4e01671c9e18dfd89a0a65cc4158d4eb621528
+  languageName: node
+  linkType: hard
+
 "stream-buffers@npm:^3.0.2":
   version: 3.0.2
   resolution: "stream-buffers@npm:3.0.2"
@@ -10353,13 +10383,14 @@ fsevents@~2.1.2:
     "@commitlint/config-conventional": ^8.3.4
     "@rollup/plugin-commonjs": ^15.0.0
     "@rollup/plugin-node-resolve": ^9.0.0
+    "@rollup/plugin-replace": ^2.3.3
     "@size-limit/file": ^4.5.7
     "@solid-soda/config": ^2.2.0
+    "@storeon/svelte": ^1.0.0
     "@yarnpkg/pnpify": ^2.2.1
     babel-eslint: ^10.1.0
     commitizen: ^4.0.4
     cz-conventional-changelog: ^3.1.0
-    effector: ^21.2.2
     eslint: ^6.8.0
     eslint-config-airbnb-base: ^14.1.0
     eslint-config-prettier: ^6.10.1
@@ -10385,6 +10416,7 @@ fsevents@~2.1.2:
     sirv-cli: ^1.0.6
     size-limit: ^4.5.7
     standard-version: ^7.1.0
+    storeon: ^3.0.3
     stylelint: ^13.3.1
     stylelint-config-recess-order: ^2.0.4
     stylelint-config-recommended: ^3.0.0

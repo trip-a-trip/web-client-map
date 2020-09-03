@@ -1,21 +1,29 @@
+import { createStoreon } from 'storeon';
 import axios from 'redaxios';
-import { restore, createEffect, createEvent } from 'effector';
 
-const fetchVenuesFx = createEffect({
-  handler: async () => {
+const venuesStore = (store) => {
+  store.on('@init', () => ({
+    venues: [],
+  }));
+
+  store.on('venues/fetched', (_, venues) => ({ venues }));
+
+  store.on('venues/requested', async () => {
     const { data } = await axios.get(
       'https://venues.kamyshev.me/api/venue/list',
     );
 
-    return data;
-  },
-});
+    store.dispatch('venues/fetched', data);
+  });
+};
 
-const venueSelected = createEvent();
-const venueUnselected = createEvent();
+const activeModule = (store) => {
+  store.on('@init', () => ({ active: null }));
 
-const venues = restore(fetchVenuesFx, []);
+  store.on('active/selected', (_, active) => ({ active }));
+  store.on('active/unselected', () => ({ active: null }));
+};
 
-const activeVenue = restore(venueSelected, null).reset(venueUnselected);
+const store = createStoreon([venuesStore, activeModule]);
 
-export { venues, fetchVenuesFx, activeVenue, venueSelected, venueUnselected };
+export { store };

@@ -1,18 +1,18 @@
 <script>
   import { onMount } from 'svelte';
+  import { provideStoreon, useStoreon } from '@storeon/svelte';
 
-  import {
-    fetchVenuesFx,
-    venues,
-    activeVenue,
-    venueSelected,
-    venueUnselected,
-  } from './venues';
+  import { store } from './venues';
   import Map from './ui/Map.svelte';
   import Header from './ui/Header.svelte';
   import Venue from './ui/Venue.svelte';
 
-  onMount(fetchVenuesFx);
+  provideStoreon(store);
+
+  const { venues } = useStoreon('venues');
+  const { active } = useStoreon('active');
+
+  onMount(() => store.dispatch('venues/requested'));
 </script>
 
 <style>
@@ -29,7 +29,9 @@
 <main>
   <Header />
 
-  <Map on:select={({ detail }) => venueSelected(detail)} items={$venues} />
+  <Map
+    on:select={({ detail }) => store.dispatch('active/selected', detail)}
+    items={$venues} />
 
-  <Venue on:close={venueUnselected} item={$activeVenue} />
+  <Venue on:close={() => store.dispatch('active/unselected')} item={$active} />
 </main>
