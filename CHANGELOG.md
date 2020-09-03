@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/trip-a-trip/web-client-map/compare/v0.1.7...v0.1.8) (2020-09-03)
+
+### Features
+
+- replace effector by storeon ([8fcae7a](https://github.com/trip-a-trip/web-client-map/commit/8fcae7a09cd382ec62957389df2d304c255874e7))
+
 ### [0.1.7](https://github.com/trip-a-trip/web-client-map/compare/v0.1.6...v0.1.7) (2020-09-03)
 
 ### Bug Fixes
