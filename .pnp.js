@@ -825,7 +825,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/cacheable-request", "npm:6.0.1"],
             ["@types/http-cache-semantics", "npm:4.0.0"],
             ["@types/keyv", "npm:3.1.1"],
-            ["@types/node", "npm:14.6.2"],
+            ["@types/node", "npm:14.6.3"],
             ["@types/responselike", "npm:1.0.0"]
           ],
           "linkType": "HARD",
@@ -888,7 +888,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-keyv-npm-3.1.1-779a80f2c7-3aaf557d5b.zip/node_modules/@types/keyv/",
           "packageDependencies": [
             ["@types/keyv", "npm:3.1.1"],
-            ["@types/node", "npm:14.6.2"]
+            ["@types/node", "npm:14.6.3"]
           ],
           "linkType": "HARD",
         }]
@@ -903,17 +903,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/node", [
-        ["npm:13.13.15", {
-          "packageLocation": "./.yarn/cache/@types-node-npm-13.13.15-7b0338b527-767eefa702.zip/node_modules/@types/node/",
+        ["npm:13.13.16", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-13.13.16-82814b2197-a56b4666f3.zip/node_modules/@types/node/",
           "packageDependencies": [
-            ["@types/node", "npm:13.13.15"]
+            ["@types/node", "npm:13.13.16"]
           ],
           "linkType": "HARD",
         }],
-        ["npm:14.6.2", {
-          "packageLocation": "./.yarn/cache/@types-node-npm-14.6.2-8d443058b2-e88f4749fd.zip/node_modules/@types/node/",
+        ["npm:14.6.3", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-14.6.3-e04b759163-8bdc9a0e2a.zip/node_modules/@types/node/",
           "packageDependencies": [
-            ["@types/node", "npm:14.6.2"]
+            ["@types/node", "npm:14.6.3"]
           ],
           "linkType": "HARD",
         }]
@@ -950,7 +950,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-resolve-npm-1.17.1-9a8396bef2-8e72a73574.zip/node_modules/@types/resolve/",
           "packageDependencies": [
             ["@types/resolve", "npm:1.17.1"],
-            ["@types/node", "npm:14.6.2"]
+            ["@types/node", "npm:14.6.3"]
           ],
           "linkType": "HARD",
         }]
@@ -960,7 +960,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-responselike-npm-1.0.0-85dd08af42-e6e6613c80.zip/node_modules/@types/responselike/",
           "packageDependencies": [
             ["@types/responselike", "npm:1.0.0"],
-            ["@types/node", "npm:14.6.2"]
+            ["@types/node", "npm:14.6.3"]
           ],
           "linkType": "HARD",
         }]
@@ -993,7 +993,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cross-spawn", "npm:7.0.3"],
             ["diff", "npm:4.0.2"],
             ["globby", "npm:11.0.1"],
-            ["got", "npm:11.5.2"],
+            ["got", "npm:11.6.0"],
             ["json-file-plus", "npm:3.3.1"],
             ["lodash", "npm:4.17.20"],
             ["logic-solver", "npm:2.0.1"],
@@ -1060,7 +1060,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@yarnpkg-pnp-npm-2.2.1-d1d0e68355-0ea840774c.zip/node_modules/@yarnpkg/pnp/",
           "packageDependencies": [
             ["@yarnpkg/pnp", "npm:2.2.1"],
-            ["@types/node", "npm:13.13.15"],
+            ["@types/node", "npm:13.13.16"],
             ["@yarnpkg/fslib", "npm:2.2.1"],
             ["tslib", "npm:1.13.0"]
           ],
@@ -5103,10 +5103,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["got", [
-        ["npm:11.5.2", {
-          "packageLocation": "./.yarn/cache/got-npm-11.5.2-66a447e099-9cfd13e7c7.zip/node_modules/got/",
+        ["npm:11.6.0", {
+          "packageLocation": "./.yarn/cache/got-npm-11.6.0-67ed1fbeeb-85c79e7fc0.zip/node_modules/got/",
           "packageDependencies": [
-            ["got", "npm:11.5.2"],
+            ["got", "npm:11.6.0"],
             ["@sindresorhus/is", "npm:3.1.2"],
             ["@szmarczak/http-timer", "npm:4.0.5"],
             ["@types/cacheable-request", "npm:6.0.1"],
@@ -6278,7 +6278,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/jest-worker-npm-26.3.0-e1f6959752-6b7190ef8f.zip/node_modules/jest-worker/",
           "packageDependencies": [
             ["jest-worker", "npm:26.3.0"],
-            ["@types/node", "npm:14.6.2"],
+            ["@types/node", "npm:14.6.3"],
             ["merge-stream", "npm:2.0.0"],
             ["supports-color", "npm:7.2.0"]
           ],
@@ -9061,7 +9061,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/randombytes-npm-2.1.0-e3da76bccf-ede2693af0.zip/node_modules/randombytes/",
           "packageDependencies": [
             ["randombytes", "npm:2.1.0"],
-            ["safe-buffer", "npm:5.2.1"]
+            ["safe-buffer", "npm:5.1.2"]
           ],
           "linkType": "HARD",
         }]
