@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/trip-a-trip/web-client-map/compare/v0.1.4...v0.1.5) (2020-09-03)
+
+### Features
+
+- add geolocation control ([119e184](https://github.com/trip-a-trip/web-client-map/commit/119e18482e4ffbc17d0012c8d7a1b347a43a95f8))
+
 ### 0.1.4 (2020-09-02)
 
 ### Features
