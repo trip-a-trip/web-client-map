@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/trip-a-trip/web-client-map/compare/v0.1.6...v0.1.7) (2020-09-03)
+
+### Bug Fixes
+
+- fix eslint issues ([e53c1da](https://github.com/trip-a-trip/web-client-map/commit/e53c1da438623fd8c723bcab681c962ed26332c8))
+
 ### [0.1.6](https://github.com/trip-a-trip/web-client-map/compare/v0.1.5...v0.1.6) (2020-09-03)
 
 ### Features
