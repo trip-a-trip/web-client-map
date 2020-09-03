@@ -9549,6 +9549,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"svelte-icons@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "svelte-icons@npm:2.1.0"
+  checksum: 4bfcf5fbde3cf1ec7ea2145513d71921129fb4f003a33d7e72f80051f7c24e01e6690cd2f3127ed91753741c74b04ba3d3428dad5e8415e0095a2c80f7ba112b
+  languageName: node
+  linkType: hard
+
 "svelte@npm:^3.24.1":
   version: 3.24.1
   resolution: "svelte@npm:3.24.1"
@@ -10283,6 +10290,7 @@ fsevents@~2.1.2:
     stylelint-config-recommended: ^3.0.0
     stylelint-order: ^4.1.0
     svelte: ^3.24.1
+    svelte-icons: ^2.1.0
   languageName: unknown
   linkType: soft
 

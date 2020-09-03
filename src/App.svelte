@@ -13,7 +13,9 @@
     font-family: -apple-system, system-ui, Roboto, 'Open Sans', Helvetica, Arial,
       sans-serif;
 
-    --black: #0c131d;
+    --ink_800: #0c131d;
+    --ink_500: #5a6472;
+    --ink_400: #9ea9b7;
   }
 </style>
 

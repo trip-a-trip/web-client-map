@@ -75,7 +75,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["stylelint-config-recess-order", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:2.1.0"],
             ["stylelint-config-recommended", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:3.0.0"],
             ["stylelint-order", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:4.1.0"],
-            ["svelte", "npm:3.24.1"]
+            ["svelte", "npm:3.24.1"],
+            ["svelte-icons", "npm:2.1.0"]
           ],
           "linkType": "SOFT",
         }]
@@ -10733,6 +10734,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["svelte-icons", [
+        ["npm:2.1.0", {
+          "packageLocation": "./.yarn/cache/svelte-icons-npm-2.1.0-c1a633bca9-4bfcf5fbde.zip/node_modules/svelte-icons/",
+          "packageDependencies": [
+            ["svelte-icons", "npm:2.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["svg-tags", [
         ["npm:1.0.0", {
           "packageLocation": "./.yarn/cache/svg-tags-npm-1.0.0-68a35c11fa-8f19e7b2b5.zip/node_modules/svg-tags/",
@@ -11554,7 +11564,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["stylelint-config-recess-order", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:2.1.0"],
             ["stylelint-config-recommended", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:3.0.0"],
             ["stylelint-order", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:4.1.0"],
-            ["svelte", "npm:3.24.1"]
+            ["svelte", "npm:3.24.1"],
+            ["svelte-icons", "npm:2.1.0"]
           ],
           "linkType": "SOFT",
         }]

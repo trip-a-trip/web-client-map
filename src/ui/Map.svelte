@@ -2,6 +2,8 @@
   import * as Leaflet from 'leaflet';
   import 'leaflet/dist/leaflet.css';
 
+  import MapControls from './MapControls.svelte';
+
   const PHUKET_COORDINATES = [7.9519, 98.3381];
   const DEFAULT_ZOOM = 8;
 
@@ -30,12 +32,16 @@
     }
   }
 
-  function handleZoomInClick() {
+  function handleZoomIn() {
     map.zoomIn();
   }
 
-  function handleZoomOutClick() {
+  function handleZoomOut() {
     map.zoomOut();
+  }
+
+  function handleNewPosition({ detail }) {
+    map.setView(detail, 14);
   }
 </script>
 
@@ -48,34 +54,13 @@
     width: 100vw;
     height: 100vh;
   }
-
-  .controls {
-    position: absolute;
-
-    right: 32px;
-    bottom: 32px;
-    z-index: 2;
-
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-
-    gap: 8px;
-  }
-
-  .controls > * {
-    width: 32px;
-    height: 32px;
-    background-color: white;
-    border: none;
-    border-radius: 32px;
-  }
 </style>
 
 <svelte:window on:resize={resizeMap} />
 
 <div class="map" use:mapAction />
 
-<div class="controls">
-  <button on:click={handleZoomInClick}>+</button>
-  <button on:click={handleZoomOutClick}>-</button>
-</div>
+<MapControls
+  on:zoomIn={handleZoomIn}
+  on:zoomOut={handleZoomOut}
+  on:newPosition={handleNewPosition} />

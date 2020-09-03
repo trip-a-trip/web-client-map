@@ -7,13 +7,13 @@
     font-size: 34px;
     font-weight: 600;
     line-height: 41px;
-    color: var(--black);
+    color: var(--ink_800);
   }
 
   header {
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: 32px;
+    right: 32px;
     z-index: 2;
     padding-right: 32px;
     padding-left: 32px;
