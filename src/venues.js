@@ -1,5 +1,5 @@
 import axios from 'redaxios';
-import { restore, createEffect } from 'effector';
+import { restore, createEffect, createEvent } from 'effector';
 
 const fetchVenuesFx = createEffect({
   handler: async () => {
@@ -11,6 +11,11 @@ const fetchVenuesFx = createEffect({
   },
 });
 
+const venueSelected = createEvent();
+const venueUnselected = createEvent();
+
 const venues = restore(fetchVenuesFx, []);
 
-export { venues, fetchVenuesFx };
+const activeVenue = restore(venueSelected, null).reset(venueUnselected);
+
+export { venues, fetchVenuesFx, activeVenue, venueSelected, venueUnselected };

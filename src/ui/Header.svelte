@@ -21,9 +21,9 @@
     border-radius: 4px;
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 768px) {
     header {
-      width: calc(100vw - 96px);
+      width: calc(100vw - 128px);
       text-align: center;
     }
   }

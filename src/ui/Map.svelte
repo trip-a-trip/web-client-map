@@ -1,11 +1,30 @@
 <script>
   import * as Leaflet from 'leaflet';
   import 'leaflet/dist/leaflet.css';
+  import { createEventDispatcher } from 'svelte';
 
   import MapControls from './MapControls.svelte';
 
   const PHUKET_COORDINATES = [7.9519, 98.3381];
   const DEFAULT_ZOOM = 8;
+  const CLOSE_ZOOM = 14;
+
+  const dispatch = createEventDispatcher();
+
+  export let items;
+
+  // TODO: rewrite this code
+  // handle real select
+  $: {
+    setTimeout(() => {
+      const found = items
+        .slice()
+        .reverse()
+        .find(({ isExpensive, isAmazing }) => isExpensive && isAmazing);
+
+      dispatch('select', found);
+    }, 1000);
+  }
 
   let map;
 
@@ -25,24 +44,6 @@
       },
     };
   }
-
-  function resizeMap() {
-    if (map) {
-      map.invalidateSize();
-    }
-  }
-
-  function handleZoomIn() {
-    map.zoomIn();
-  }
-
-  function handleZoomOut() {
-    map.zoomOut();
-  }
-
-  function handleNewPosition({ detail }) {
-    map.setView(detail, 14);
-  }
 </script>
 
 <style>
@@ -56,11 +57,11 @@
   }
 </style>
 
-<svelte:window on:resize={resizeMap} />
+<svelte:window on:resize={() => map?.invalidateSize()} />
 
 <div class="map" use:mapAction />
 
 <MapControls
-  on:zoomIn={handleZoomIn}
-  on:zoomOut={handleZoomOut}
-  on:newPosition={handleNewPosition} />
+  on:zoomIn={() => map.zoomIn()}
+  on:zoomOut={() => map.zoomOut()}
+  on:newPosition={({ detail }) => map.setView(detail, CLOSE_ZOOM)} />

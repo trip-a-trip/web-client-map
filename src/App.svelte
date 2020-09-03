@@ -1,9 +1,16 @@
 <script>
   import { onMount } from 'svelte';
 
-  import { fetchVenuesFx, venues } from './venues';
+  import {
+    fetchVenuesFx,
+    venues,
+    activeVenue,
+    venueSelected,
+    venueUnselected,
+  } from './venues';
   import Map from './ui/Map.svelte';
   import Header from './ui/Header.svelte';
+  import Venue from './ui/Venue.svelte';
 
   onMount(fetchVenuesFx);
 </script>
@@ -22,9 +29,7 @@
 <main>
   <Header />
 
-  <Map />
+  <Map on:select={({ detail }) => venueSelected(detail)} items={$venues} />
 
-  {#each $venues as venue}
-    <li>{venue.name}</li>
-  {/each}
+  <Venue on:close={venueUnselected} item={$activeVenue} />
 </main>
