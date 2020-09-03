@@ -13,17 +13,28 @@
 
   export let items;
 
-  // TODO: rewrite this code
-  // handle real select
-  $: {
-    setTimeout(() => {
-      const found = items
-        .slice()
-        .reverse()
-        .find(({ isExpensive, isAmazing }) => isExpensive && isAmazing);
+  const markers = {};
 
-      dispatch('select', found);
-    }, 1000);
+  $: {
+    // remove old markers
+    Object.entries(markers)
+      .filter(([markerId]) => items.map((item) => item.id).includes(markerId))
+      .forEach(([_, marker]) => {
+        marker.remove();
+        markers[id] = null;
+      });
+
+    // add new markers
+    items.forEach((item) => {
+      markers[item.id] = Leaflet.marker(
+        [item.coordinates.latitude, item.coordinates.longitude],
+        {
+          icon: Leaflet.divIcon({ className: 'map-marker' }),
+        },
+      )
+        .addTo(map)
+        .on('click', () => dispatch('select', item));
+    });
   }
 
   let map;
@@ -54,6 +65,12 @@
     z-index: 1;
     width: 100vw;
     height: 100vh;
+  }
+
+  :global(.map-marker) {
+    background-color: white;
+    border: var(--ink_400) 1px solid;
+    border-radius: 10px;
   }
 </style>
 
