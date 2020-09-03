@@ -13,15 +13,17 @@
 
   export let items;
 
+  let map;
+
   const markers = {};
 
   $: {
     // remove old markers
     Object.entries(markers)
       .filter(([markerId]) => items.map((item) => item.id).includes(markerId))
-      .forEach(([_, marker]) => {
+      .forEach(([markerId, marker]) => {
         marker.remove();
-        markers[id] = null;
+        markers[markerId] = null;
       });
 
     // add new markers
@@ -36,8 +38,6 @@
         .on('click', () => dispatch('select', item));
     });
   }
-
-  let map;
 
   function mapAction(container) {
     map = Leaflet.map(container, {
