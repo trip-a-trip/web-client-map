@@ -12,6 +12,7 @@
     "commit": "yarn git-cz",
     "lint:code": "yarn eslint \"./**/*.{js,svelte}\"",
     "lint:styles": "yarn stylelint \"./**/*.svelte\"",
+    "lint:size": "yarn build && yarn size-limit",
     "release": "yarn standard-version"
   },
   "dependencies": {
@@ -36,6 +37,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@size-limit/file": "^4.5.7",
     "babel-eslint": "^10.1.0",
     "commitizen": "^4.0.4",
     "cz-conventional-changelog": "^3.1.0",
@@ -52,12 +54,18 @@
     "prettier": "^2.0.4",
     "prettier-plugin-svelte": "^1.2.0",
     "sirv-cli": "^1.0.6",
+    "size-limit": "^4.5.7",
     "standard-version": "^7.1.0",
     "stylelint": "^13.3.1",
     "stylelint-config-recess-order": "^2.0.4",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-order": "^4.1.0"
   },
+  "size-limit": [
+    {
+      "path": "public/build/bundle*.js"
+    }
+  ],
   "prettier": {
     "trailingComma": "all",
     "singleQuote": true

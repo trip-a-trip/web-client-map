@@ -23,6 +23,14 @@ workflows:
               only: /.*/
             tags:
               only: /.*/
+      - yarn/local:
+          name: size-limit
+          command: 'lint:size'
+          filters:
+            branches:
+              only: /.*/
+            tags:
+              only: /.*/
       - docker/build_push:
           org_name: 'tripatrip'
           image_name: 'web-client-map'
@@ -37,6 +45,7 @@ workflows:
           requires:
             - eslint
             - stylelint
+            - size-limit
       - deploy/roll_out:
           notify_user: '-488110451'
           ssh_user: SSH_USER
