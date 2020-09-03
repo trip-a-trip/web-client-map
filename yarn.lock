@@ -23,7 +23,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:>=7.9.0":
+"@babel/core@npm:>=7.9.0, @babel/core@npm:^7.11.5":
   version: 7.11.5
   resolution: "@babel/core@npm:7.11.5"
   dependencies:
@@ -469,10 +469,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polka/url@npm:^1.0.0-next.9":
-  version: 1.0.0-next.11
-  resolution: "@polka/url@npm:1.0.0-next.11"
-  checksum: 268a83f4e1097baf0067e183b7682a00b647c6c30113a92b98c80cd719fc689a45d28c16257ffc817f5ffd4894fc52157957c39aaac329cdd12c82a10f6d61f7
+"@rollup/plugin-babel@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "@rollup/plugin-babel@npm:5.2.0"
+  dependencies:
+    "@babel/helper-module-imports": ^7.10.4
+    "@rollup/pluginutils": ^3.1.0
+  peerDependencies:
+    "@babel/core": ^7.0.0
+    "@types/babel__core": ^7.1.9
+    rollup: ^1.20.0||^2.0.0
+  peerDependenciesMeta:
+    "@types/babel__core":
+      optional: true
+  checksum: 22404ced65f1f83c854c2325d467241e5912c0ca28ab667e7799d0be9d1cbc489de3345f8049ea29b8934d92b25eee3b3e3fa057de8da102eb33c64675c35f2b
   languageName: node
   linkType: hard
 
@@ -490,6 +500,15 @@ __metadata:
   peerDependencies:
     rollup: ^2.22.0
   checksum: c48493cabb1ab71a24bf0561f48a6d98843c7a07fef312e73a6c08ad3b19301b4d4a45bd0b6fb0acc856b19695f898b0d0be6cdb157439397d05aeb572d7dbdd
+  languageName: node
+  linkType: hard
+
+"@rollup/plugin-html@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@rollup/plugin-html@npm:0.2.0"
+  peerDependencies:
+    rollup: ^1.20.0||^2.0.0
+  checksum: c47109a4ee775f9b9b630b9060955e107193a7064b9a8b82a277306e53f3c3231c570dc37e461e76d16357cd4bdc7559c4f433dc8df6232fbceeddf82fa6be6a
   languageName: node
   linkType: hard
 
@@ -1743,6 +1762,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"charenc@npm:0.0.2":
+  version: 0.0.2
+  resolution: "charenc@npm:0.0.2"
+  checksum: ff8199e90334dc7bb60a9fe0aa2bef3e72b1d125e801151459db1cf1c9b77c437ad4a5d9248ee0003720bcb537a90787a53f6e2e1613dbf5fba46f59d5547307
+  languageName: node
+  linkType: hard
+
 "chokidar@npm:^3.3.0, chokidar@npm:^3.4.2":
   version: 3.4.2
   resolution: "chokidar@npm:3.4.2"
@@ -2134,13 +2160,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"console-clear@npm:^1.1.0":
-  version: 1.1.1
-  resolution: "console-clear@npm:1.1.1"
-  checksum: e82c5420fb6ee156459f4c691454776cd854753bd35e1ef0e1db08f5d35c081034951cb9c778ac0d17bc44fca172facea38c70aa66937a03ba5058072ceb68c9
-  languageName: node
-  linkType: hard
-
 "console-control-strings@npm:^1.0.0, console-control-strings@npm:~1.1.0":
   version: 1.1.0
   resolution: "console-control-strings@npm:1.1.0"
@@ -2495,6 +2514,13 @@ __metadata:
     shebang-command: ^1.2.0
     which: ^1.2.9
   checksum: 05fbbf957d9b81dc05fd799a238f6aacc2e7cc9783fff3f0e00439a97d6f269c90482571cbf1eeea17200fd119161a2d1f88aa49a8110b176e04f2a70825284f
+  languageName: node
+  linkType: hard
+
+"crypt@npm:0.0.2":
+  version: 0.0.2
+  resolution: "crypt@npm:0.0.2"
+  checksum: 1ad9c8439ad26eef21ca130df3e79fff4915e839167efde163891b935ffb41742bfbc359bb00ae8b1ff205db52e7fb0e32326b84b7f977cd6e6a279eed9dc742
   languageName: node
   linkType: hard
 
@@ -4168,13 +4194,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"get-port@npm:^3.2.0":
-  version: 3.2.0
-  resolution: "get-port@npm:3.2.0"
-  checksum: 84ce817471a062262a44e8172b6e8799e7ef523240ad1c03ce1396fd63d87426d46ae9c072f9ce55c0190403bc78e72b3bb493cd5cb16b49f3be52ae0924cdc2
-  languageName: node
-  linkType: hard
-
 "get-stdin@npm:7.0.0":
   version: 7.0.0
   resolution: "get-stdin@npm:7.0.0"
@@ -5066,7 +5085,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"is-buffer@npm:^1.1.5":
+"is-buffer@npm:^1.1.5, is-buffer@npm:~1.1.6":
   version: 1.1.6
   resolution: "is-buffer@npm:1.1.6"
   checksum: 336ec78f00e88efe6ff6f1aa08d06aadb942a6cd320e5f538ac00648378fb964743b3737c88ce7ce8741c067e4a3b78f596b83ee1a3c72dc2885ea0b03dc84f2
@@ -5677,13 +5696,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"kleur@npm:^3.0.0":
-  version: 3.0.3
-  resolution: "kleur@npm:3.0.3"
-  checksum: 20ef0e37fb3f9aebbec8a75b61f547051aa61e3a6c51bd2678e77a11d69d73885a76966aea77f09c40677c7dfa274a5e16741ec89859213c9f798d4a96f77521
-  languageName: node
-  linkType: hard
-
 "known-css-properties@npm:^0.19.0":
   version: 0.19.0
   resolution: "known-css-properties@npm:0.19.0"
@@ -5836,13 +5848,6 @@ fsevents@~2.1.2:
     emojis-list: ^3.0.0
     json5: ^1.0.1
   checksum: 9fd690e57ad78d32ff2942383b4a7a175eba575280ba5aca3b4d03183fec34aa0db314f49bd3301adf7e60b02471644161bf53149e8f2d18fd6a52627e95a927
-  languageName: node
-  linkType: hard
-
-"local-access@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "local-access@npm:1.0.1"
-  checksum: fca90ccfe6e9dff65cd4c601c124ed931216ff1872b28b8ea99b0a7d9b6ae38536588a899ce8be807ef0cbefec6d328c8582b5bd457abc297570e0f1e0da4692
   languageName: node
   linkType: hard
 
@@ -6110,6 +6115,17 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"md5@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "md5@npm:2.3.0"
+  dependencies:
+    charenc: 0.0.2
+    crypt: 0.0.2
+    is-buffer: ~1.1.6
+  checksum: ba00eaf2b7ca49bb7ba67b8ded5db45ecfba4e85694f30cb0b720051936af5337bbd350865357b91580ecb0f7053df658381d50cb689f22135dfa345c52d61cc
+  languageName: node
+  linkType: hard
+
 "mdast-util-compact@npm:^2.0.0":
   version: 2.0.1
   resolution: "mdast-util-compact@npm:2.0.1"
@@ -6281,7 +6297,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"mime@npm:^2.3.1":
+"mime@npm:>=2.4.6":
   version: 2.4.6
   resolution: "mime@npm:2.4.6"
   bin:
@@ -6415,13 +6431,6 @@ fsevents@~2.1.2:
   version: 1.0.1
   resolution: "modify-values@npm:1.0.1"
   checksum: 55165ae8b4ea2aafebe5027dd427d4a833d54606c81546f4d3c04943d99d194ac9481fa076719f326d243c475e2dfa5cf0219e68cffbbf9c44b24e46eb889779
-  languageName: node
-  linkType: hard
-
-"mri@npm:^1.1.0":
-  version: 1.1.6
-  resolution: "mri@npm:1.1.6"
-  checksum: 87a09465063063da6d69d98ac75a6206a597c7533561c74e8aab5e6490ebe2a0e94c583fb6e02429e1f4291286a9549eb6a9699c83f5bad252c2c9b4eada97da
   languageName: node
   linkType: hard
 
@@ -6823,6 +6832,15 @@ fsevents@~2.1.2:
   bin:
     opencollective-postinstall: index.js
   checksum: d75b06b80eb426aaf099307ca4398f3119c8c86ff3806a95cfe234b979b80c07080040734fe2dc3c51fed5b15bd98dae88340807980bdc74aa1ebf045c74ef06
+  languageName: node
+  linkType: hard
+
+"opener@npm:1":
+  version: 1.5.2
+  resolution: "opener@npm:1.5.2"
+  bin:
+    opener: bin/opener-bin.js
+  checksum: 855420de4ffbfed1a25f000e7d146c4194aa678cc113d428572de67f9491f6721183ffdeb705af3b08404e29f7ec451b88da9ae19347a515872803dfabef471c
   languageName: node
   linkType: hard
 
@@ -8523,6 +8541,25 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"rollup-plugin-progress@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "rollup-plugin-progress@npm:1.1.2"
+  dependencies:
+    chalk: ^2.4.2
+  checksum: 25aed1a02fd2aa2518355541075e63884bb1c54d8b3ec6efc4097bfb078e95be1f8d0db63bb6fec322ba0c15c0451290ae61c254106118097d4aefa357c25dd9
+  languageName: node
+  linkType: hard
+
+"rollup-plugin-serve@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "rollup-plugin-serve@npm:1.0.4"
+  dependencies:
+    mime: ">=2.4.6"
+    opener: 1
+  checksum: ef93ad881cd8d8803e0b3024afb77302adf3b34b960a8263bcc445c4e9dc805ab036bfca52feae0a2450d58f825dda2b1b4c480219406937775671c4fc8ab1ff
+  languageName: node
+  linkType: hard
+
 "rollup-plugin-svelte@npm:^6.0.0":
   version: 6.0.0
   resolution: "rollup-plugin-svelte@npm:6.0.0"
@@ -8597,15 +8634,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"sade@npm:^1.6.0":
-  version: 1.7.3
-  resolution: "sade@npm:1.7.3"
-  dependencies:
-    mri: ^1.1.0
-  checksum: 07d9c961c45cde524b9f5e3e8d64c1dbbc6ae31309ed47b4f32829053d1aaf00c060af1257b496aa479b66254c53ee2836dc409be55107224fdea75ec805fffe
-  languageName: node
-  linkType: hard
-
 "safe-buffer@npm:^5.0.1, safe-buffer@npm:^5.1.0, safe-buffer@npm:^5.1.2, safe-buffer@npm:~5.2.0":
   version: 5.2.1
   resolution: "safe-buffer@npm:5.2.1"
@@ -8672,13 +8700,6 @@ fsevents@~2.1.2:
   version: 2.1.0
   resolution: "secure-json-parse@npm:2.1.0"
   checksum: 1d5327c1ecabc99678620e0c005a3e9d08ff0b2d8b8aef8ba8242b39e0cb17984453dfcf1967bde072c010a4e9f02a3abb1c186f56c0bbd39654a0ee247b77dd
-  languageName: node
-  linkType: hard
-
-"semiver@npm:^1.0.0":
-  version: 1.1.0
-  resolution: "semiver@npm:1.1.0"
-  checksum: d38d939f8fc8a8252bd47525bba37440286f2dbbe4eff237675a072df5a8b009867a932f158304bd15d4e316e5eabc204814ca1a3bda207af8b42b5adb56b61c
   languageName: node
   linkType: hard
 
@@ -8868,35 +8889,6 @@ fsevents@~2.1.2:
   dependencies:
     is-arrayish: ^0.3.1
   checksum: a5a2c1c86cea94f42ab843508e7c68b5bbfd15acb08056d600ac2e9c7f7c41bc417e71160ea3034a5411d3cce186c801f7a56badfb3a854906ce163120318875
-  languageName: node
-  linkType: hard
-
-"sirv-cli@npm:^1.0.6":
-  version: 1.0.6
-  resolution: "sirv-cli@npm:1.0.6"
-  dependencies:
-    console-clear: ^1.1.0
-    get-port: ^3.2.0
-    kleur: ^3.0.0
-    local-access: ^1.0.1
-    sade: ^1.6.0
-    semiver: ^1.0.0
-    sirv: ^1.0.6
-    tinydate: ^1.0.0
-  bin:
-    sirv: bin.js
-  checksum: 36554a30afb793422a74a71407945118da03ad96c041af872391482e8676127824081845c767cf273d6e6bc22305ff918253053d6bbcc5bd2e53d99c88e6f00c
-  languageName: node
-  linkType: hard
-
-"sirv@npm:^1.0.6":
-  version: 1.0.6
-  resolution: "sirv@npm:1.0.6"
-  dependencies:
-    "@polka/url": ^1.0.0-next.9
-    mime: ^2.3.1
-    totalist: ^1.0.0
-  checksum: b85f5721535c6604cc6b3c1887a38be7733586c2db122016c2e144117ad281bdab3827e8191c45be78a1aaf0e75c81f71007c3edaef1791b50d90253b0c0e2f6
   languageName: node
   linkType: hard
 
@@ -9841,13 +9833,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"tinydate@npm:^1.0.0":
-  version: 1.3.0
-  resolution: "tinydate@npm:1.3.0"
-  checksum: c28f21559f7efe575271547c39ad477977cf439b48f81861a99d02de1ec2595e832b9702d7af0e77f27a4304ac142d983c34ae9250c8527ffa24a50a9156a0ae
-  languageName: node
-  linkType: hard
-
 "title-case@npm:^2.1.0":
   version: 2.1.1
   resolution: "title-case@npm:2.1.1"
@@ -9918,13 +9903,6 @@ fsevents@~2.1.2:
   version: 1.0.0
   resolution: "toidentifier@npm:1.0.0"
   checksum: 95720e8a0f98f1525f50ccbecbc2a23f0a1b4e448de03819dbbeda03adf0d2010fe64525fbc9d549765242550d341bb891672e4ac0b2cac58613cdd742324255
-  languageName: node
-  linkType: hard
-
-"totalist@npm:^1.0.0":
-  version: 1.1.0
-  resolution: "totalist@npm:1.1.0"
-  checksum: 771f194e1113b7883410a42ddf04a8d969e64346d7bea953805ee796388e4a29c8b611e985c7f4a6548a8211acf1068e599089389aa3a8ab7fa3a4cf839b1bfc
   languageName: node
   linkType: hard
 
@@ -10379,9 +10357,12 @@ fsevents@~2.1.2:
   version: 0.0.0-use.local
   resolution: "web-client-map@workspace:."
   dependencies:
+    "@babel/core": ^7.11.5
     "@commitlint/cli": ^8.3.5
     "@commitlint/config-conventional": ^8.3.4
+    "@rollup/plugin-babel": ^5.2.0
     "@rollup/plugin-commonjs": ^15.0.0
+    "@rollup/plugin-html": ^0.2.0
     "@rollup/plugin-node-resolve": ^9.0.0
     "@rollup/plugin-replace": ^2.3.3
     "@size-limit/file": ^4.5.7
@@ -10405,15 +10386,17 @@ fsevents@~2.1.2:
     husky: ^4.2.5
     leaflet: ^1.6.0
     lint-staged: ^10.1.3
+    md5: ^2.3.0
     prettier: ^2.0.4
     prettier-plugin-svelte: ^1.2.0
     redaxios: ^0.3.0
     rollup: ^2.26.9
     rollup-plugin-livereload: ^2.0.0
     rollup-plugin-postcss: ^3.1.8
+    rollup-plugin-progress: ^1.1.2
+    rollup-plugin-serve: ^1.0.4
     rollup-plugin-svelte: ^6.0.0
     rollup-plugin-terser: ^7.0.1
-    sirv-cli: ^1.0.6
     size-limit: ^4.5.7
     standard-version: ^7.1.0
     storeon: ^3.0.3

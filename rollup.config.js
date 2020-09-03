@@ -3,82 +3,61 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import replace from '@rollup/plugin-replace';
 import livereload from 'rollup-plugin-livereload';
+import serve from 'rollup-plugin-serve';
+import html from '@rollup/plugin-html';
 import postcss from 'rollup-plugin-postcss';
+import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
-import { spawn } from 'child_process';
+import progress from 'rollup-plugin-progress';
+import md5 from 'md5';
 
-const production = !process.env.ROLLUP_WATCH;
+const PRODUCTION = !process.env.ROLLUP_WATCH;
+const DEVELOPMENT = !PRODUCTION;
 
-function serve() {
-  let server;
-
-  function toExit() {
-    if (server) server.kill(0);
-  }
-
-  return {
-    writeBundle() {
-      if (server) return;
-      server = spawn('npm', ['run', 'start', '--', '--dev'], {
-        stdio: ['ignore', 'inherit', 'inherit'],
-        shell: true,
-      });
-
-      process.on('SIGTERM', toExit);
-      process.on('exit', toExit);
-    },
-  };
-}
+const DIST = 'public';
 
 export default {
   input: 'src/index.js',
   output: {
-    sourcemap: true,
-    format: 'iife',
-    name: 'app',
-    file: 'public/build/bundle.js',
+    sourcemap: DEVELOPMENT,
+    dir: DIST,
+    entryFileNames: '[name].[hash].js',
   },
   plugins: [
     svelte({
-      // enable run-time checks when not in production
-      dev: !production,
-      // we'll extract any component CSS out into
-      // a separate file - better for performance
+      dev: DEVELOPMENT,
       css: (css) => {
-        css.write('bundle.css');
+        const hash = md5(css.code).slice(0, 8);
+        css.write(`styles.${hash}.css`, DEVELOPMENT);
       },
     }),
-
-    // If you have external dependencies installed from
-    // npm, you'll most likely need these plugins. In
-    // some cases you'll need additional configuration -
-    // consult the documentation for details:
-    // https://github.com/rollup/plugins/tree/master/packages/commonjs
+    html({
+      title: 'Где поесть? | Карта',
+      attributes: { html: { lang: 'ru' } },
+      meta: [
+        { name: 'viewport', content: 'width=device-width,initial-scale=1' },
+        { charset: 'utf-8' },
+      ],
+      publicPath: '/',
+    }),
+    postcss({
+      plugins: [],
+    }),
+    babel({ babelHelpers: 'bundled' }),
+    replace({
+      'process.env.NODE_ENV': JSON.stringify(
+        PRODUCTION ? 'production' : 'development',
+      ),
+    }),
+    progress(),
     resolve({
       browser: true,
       dedupe: ['svelte'],
     }),
     commonjs(),
-    postcss({
-      plugins: [],
-    }),
-    replace({
-      'process.env.NODE_ENV': JSON.stringify(
-        production ? 'production' : 'development',
-      ),
-    }),
-
-    // In dev mode, call `npm run start` once
-    // the bundle has been generated
-    !production && serve(),
-
-    // Watch the `public` directory and refresh the
-    // browser on changes when not in production
-    !production && livereload('public'),
-
-    // If we're building for production (npm run build
-    // instead of npm run dev), minify
-    production && terser(),
+    DEVELOPMENT && serve(DIST),
+    DEVELOPMENT && livereload(DIST),
+    PRODUCTION && terser(),
   ],
   watch: {
     clearScreen: false,

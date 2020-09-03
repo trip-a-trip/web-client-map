@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import { provideStoreon, useStoreon } from '@storeon/svelte';
 
-  import { store } from './venues';
+  import { store } from './store';
   import Map from './ui/Map.svelte';
   import Header from './ui/Header.svelte';
   import Venue from './ui/Venue.svelte';

@@ -2,7 +2,6 @@ Dockerfile
 *.log
 .yarn/unplugged
 .yarn/install-state.gz
-public/build
+public
 .env
 .env.dist
-public/build
