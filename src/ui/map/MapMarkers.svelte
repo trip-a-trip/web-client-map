@@ -11,11 +11,12 @@
 
   $: {
     // remove old markers
-    Object.entries(markers)
-      .forEach(([markerId, marker]) => {
-        marker?.remove();
-        markers[markerId] = null;
-      });
+    Object.entries(markers).forEach(([markerId, marker]) => {
+      if (marker) {
+        marker.remove();
+      }
+      markers[markerId] = null;
+    });
 
     // add new markers
     items.forEach((item) => {
