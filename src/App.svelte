@@ -5,7 +5,7 @@
   import { store } from './store';
   import Map from './ui/map/Map.svelte';
   import Header from './ui/Header.svelte';
-  import Venue from './ui/Venue.svelte';
+  import Venue from './ui/venue/Venue.svelte';
   import Switch from './ui/components/Switch.svelte';
 
   provideStoreon(store);

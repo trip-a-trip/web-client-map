@@ -2,6 +2,8 @@
   import { createEventDispatcher } from 'svelte';
   import { fly } from 'svelte/transition';
 
+  import Kind from './Kind.svelte'
+
   export let item;
 
   const dispatch = createEventDispatcher();
@@ -42,6 +44,8 @@
     {#if item.description}
       <p>{item.description}</p>
     {/if}
+
+    <Kind elements={item.kind} />
     <button on:click={() => dispatch('close')}>Close</button>
   </article>
 {/if}
