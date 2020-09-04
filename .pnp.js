@@ -73,6 +73,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier-plugin-svelte", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:1.2.0"],
             ["redaxios", "npm:0.3.0"],
             ["rollup", "npm:2.26.9"],
+            ["rollup-plugin-cleaner", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:1.0.0"],
             ["rollup-plugin-livereload", "npm:2.0.0"],
             ["rollup-plugin-postcss", "npm:3.1.8"],
             ["rollup-plugin-progress", "npm:1.1.2"],
@@ -9699,6 +9700,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["rollup-plugin-cleaner", [
+        ["virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:1.0.0", {
+          "packageLocation": "./.yarn/$$virtual/rollup-plugin-cleaner-virtual-ff746d05e3/0/cache/rollup-plugin-cleaner-npm-1.0.0-51925cbb6d-563605379f.zip/node_modules/rollup-plugin-cleaner/",
+          "packageDependencies": [
+            ["rollup-plugin-cleaner", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:1.0.0"],
+            ["@types/rollup", null],
+            ["rimraf", "npm:2.7.1"],
+            ["rollup", "npm:2.26.9"]
+          ],
+          "packagePeers": [
+            "@types/rollup",
+            "rollup"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["rollup-plugin-livereload", [
         ["npm:2.0.0", {
           "packageLocation": "./.yarn/cache/rollup-plugin-livereload-npm-2.0.0-a2772b6626-e32fc0e3dc.zip/node_modules/rollup-plugin-livereload/",
@@ -11795,6 +11812,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier-plugin-svelte", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:1.2.0"],
             ["redaxios", "npm:0.3.0"],
             ["rollup", "npm:2.26.9"],
+            ["rollup-plugin-cleaner", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:1.0.0"],
             ["rollup-plugin-livereload", "npm:2.0.0"],
             ["rollup-plugin-postcss", "npm:3.1.8"],
             ["rollup-plugin-progress", "npm:1.1.2"],

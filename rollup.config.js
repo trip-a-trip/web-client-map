@@ -4,6 +4,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import replace from '@rollup/plugin-replace';
 import livereload from 'rollup-plugin-livereload';
 import serve from 'rollup-plugin-serve';
+import cleaner from 'rollup-plugin-cleaner';
 import html from '@rollup/plugin-html';
 import postcss from 'rollup-plugin-postcss';
 import babel from '@rollup/plugin-babel';
@@ -57,6 +58,9 @@ export default {
       dedupe: ['svelte'],
     }),
     commonjs(),
+    cleaner({
+      targets: [DIST],
+    }),
     DEVELOPMENT && serve(DIST),
     DEVELOPMENT && livereload(DIST),
     PRODUCTION && terser(),

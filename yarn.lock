@@ -8573,6 +8573,17 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"rollup-plugin-cleaner@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "rollup-plugin-cleaner@npm:1.0.0"
+  dependencies:
+    rimraf: ^2.6.3
+  peerDependencies:
+    rollup: "> 1.0"
+  checksum: 563605379f12f30a8dc6b99b077e45255413c7307a055eb8cf326ee66c85da8cdd05c305b2aec0455536ebf4d19e323d420b44b5da0652712838506854852e87
+  languageName: node
+  linkType: hard
+
 "rollup-plugin-livereload@npm:^2.0.0":
   version: 2.0.0
   resolution: "rollup-plugin-livereload@npm:2.0.0"
@@ -10467,6 +10478,7 @@ fsevents@~2.1.2:
     prettier-plugin-svelte: ^1.2.0
     redaxios: ^0.3.0
     rollup: ^2.26.9
+    rollup-plugin-cleaner: ^1.0.0
     rollup-plugin-livereload: ^2.0.0
     rollup-plugin-postcss: ^3.1.8
     rollup-plugin-progress: ^1.1.2
