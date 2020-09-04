@@ -74,11 +74,11 @@
   "size-limit": [
     {
       "path": "public/*.js",
-      "limit": "47 KB"
+      "limit": "50 KB"
     },
     {
       "path": "public/*.css",
-      "limit": "4 KB"
+      "limit": "5 KB"
     }
   ],
   "prettier": {
