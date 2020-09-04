@@ -36,6 +36,8 @@ export default {
         style: sveltePreprocessPostcss(),
       },
     }),
+    postcss({ extract: true }),
+    babel({ babelHelpers: 'bundled' }),
     html({
       title: 'Где поесть? | Карта',
       attributes: { html: { lang: 'ru' } },
@@ -45,8 +47,6 @@ export default {
       ],
       publicPath: '/',
     }),
-    postcss(),
-    babel({ babelHelpers: 'bundled' }),
     replace({
       'process.env.NODE_ENV': JSON.stringify(
         PRODUCTION ? 'production' : 'development',

@@ -73,12 +73,12 @@
   },
   "size-limit": [
     {
-      "path": "public/index.*.js",
-      "limit": "51 KB"
+      "path": "public/*.js",
+      "limit": "47 KB"
     },
     {
-      "path": "public/styles.*.css",
-      "limit": "1 KB"
+      "path": "public/*.css",
+      "limit": "4 KB"
     }
   ],
   "prettier": {
