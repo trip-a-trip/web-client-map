@@ -2455,6 +2455,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cosmiconfig@npm:^2.1.0, cosmiconfig@npm:^2.1.1":
+  version: 2.2.2
+  resolution: "cosmiconfig@npm:2.2.2"
+  dependencies:
+    is-directory: ^0.3.1
+    js-yaml: ^3.4.3
+    minimist: ^1.2.0
+    object-assign: ^4.1.0
+    os-homedir: ^1.0.1
+    parse-json: ^2.2.0
+    require-from-string: ^1.1.0
+  checksum: 47151d3cbe4ead7b944bd5f34cd3363bd3d636095adbd49500763aae80d423dcd7ae0b419a7c0f77241e6d32ad050ae288d56d05d8268423bf71e2cd7ac35151
+  languageName: node
+  linkType: hard
+
 "cosmiconfig@npm:^5.0.0, cosmiconfig@npm:^5.2.0":
   version: 5.2.1
   resolution: "cosmiconfig@npm:5.2.1"
@@ -5512,7 +5527,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"js-yaml@npm:^3.10.0, js-yaml@npm:^3.13.1":
+"js-yaml@npm:^3.10.0, js-yaml@npm:^3.13.1, js-yaml@npm:^3.4.3":
   version: 3.14.0
   resolution: "js-yaml@npm:3.14.0"
   dependencies:
@@ -6881,7 +6896,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"os-homedir@npm:^1.0.0":
+"os-homedir@npm:^1.0.0, os-homedir@npm:^1.0.1":
   version: 1.0.2
   resolution: "os-homedir@npm:1.0.2"
   checksum: 725256246b2cec353250ec46442e3cfa7bc96ef92285d448a90f12f4bbd78c1bf087051b2cef0382da572e1a9ebc8aa24bd0940a3bdc633c3e3012eef1dc6848
@@ -7311,6 +7326,15 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"postcss-100vh-fix@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "postcss-100vh-fix@npm:0.1.1"
+  dependencies:
+    postcss: ^7.0.32
+  checksum: 8b4b0659c5967d0cff2401ddaf5ba4512ab917b325285ed9ec4e34b6d9380b957d12fa3d33ec975ebeeb0e189a94a1ccf161a297c34d1a19ff35e26b794865f4
+  languageName: node
+  linkType: hard
+
 "postcss-calc@npm:^7.0.1":
   version: 7.0.4
   resolution: "postcss-calc@npm:7.0.4"
@@ -7402,6 +7426,18 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"postcss-load-config@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "postcss-load-config@npm:1.2.0"
+  dependencies:
+    cosmiconfig: ^2.1.0
+    object-assign: ^4.1.0
+    postcss-load-options: ^1.2.0
+    postcss-load-plugins: ^2.3.0
+  checksum: f2b0c3f2a514e9aab2f7f6b5bd097e7137b20c4a616b2a795620cc9e59c92d732ecb38dd71df497345498f90d09b479a0304c3da8ac8e23d7df873066c77ac0f
+  languageName: node
+  linkType: hard
+
 "postcss-load-config@npm:^2.1.0":
   version: 2.1.0
   resolution: "postcss-load-config@npm:2.1.0"
@@ -7409,6 +7445,26 @@ fsevents@~2.1.2:
     cosmiconfig: ^5.0.0
     import-cwd: ^2.0.0
   checksum: 06db8cf48d442b30b1fd99807278a0845731ae28a9a68e9c13082e6ce04d47d2729cd99909448aa12ed8a5f1ba1a8b5f63542b8e453a3ce45a786e576cba06d8
+  languageName: node
+  linkType: hard
+
+"postcss-load-options@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "postcss-load-options@npm:1.2.0"
+  dependencies:
+    cosmiconfig: ^2.1.0
+    object-assign: ^4.1.0
+  checksum: 4084421094d5abc235730a2802c95e100475571cc512e663dab1d2918da74a5d6772abce86aa3842d8e6a730f7af62885065ebcd8cf89b4776fcc1eb00f7d6e8
+  languageName: node
+  linkType: hard
+
+"postcss-load-plugins@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "postcss-load-plugins@npm:2.3.0"
+  dependencies:
+    cosmiconfig: ^2.1.1
+    object-assign: ^4.1.0
+  checksum: 37c1c68cb8f98b8331f2e7a79e819e216b2d75a04a19cd6b31e557dc12ad8323e129bea145160a874ac170af733062ce65b3295feae3b0c29b598c12eb07d1d4
   languageName: node
   linkType: hard
 
@@ -8321,6 +8377,13 @@ fsevents@~2.1.2:
   version: 2.1.1
   resolution: "require-directory@npm:2.1.1"
   checksum: f495d02d89c385af2df4b26f0216ece091e99710d358d0ede424126c476d0c639e8bd77dcd237c00a6a5658f3d862e7513164f8c280263052667d06df830eb23
+  languageName: node
+  linkType: hard
+
+"require-from-string@npm:^1.1.0":
+  version: 1.2.1
+  resolution: "require-from-string@npm:1.2.1"
+  checksum: 763799f8d2527096c57613fe3efe390398fb8469de4b69e398acaaeea1a0692cf2cf837ad0af4eb8ff93066761989f9fd8ea8732a928d1dd6792f1cd5a025e4b
   languageName: node
   linkType: hard
 
@@ -9667,6 +9730,17 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"svelte-preprocess-postcss@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "svelte-preprocess-postcss@npm:1.1.1"
+  dependencies:
+    postcss-load-config: ^1.2.0
+  peerDependencies:
+    postcss: 7.x || 6.x
+  checksum: 84ebed897c9bc5a6b712e9b0debe6178e589f9eb377d0b8d7d629c8b128eeff1bfd3b31d327128b6bcc56d9d913cd2b31241b4c1aabd1054337a2f4f5e3b10f1
+  languageName: node
+  linkType: hard
+
 "svelte@npm:^3.24.1":
   version: 3.24.1
   resolution: "svelte@npm:3.24.1"
@@ -10387,6 +10461,8 @@ fsevents@~2.1.2:
     leaflet: ^1.6.0
     lint-staged: ^10.1.3
     md5: ^2.3.0
+    postcss: ^7.0.32
+    postcss-100vh-fix: ^0.1.1
     prettier: ^2.0.4
     prettier-plugin-svelte: ^1.2.0
     redaxios: ^0.3.0
@@ -10406,6 +10482,7 @@ fsevents@~2.1.2:
     stylelint-order: ^4.1.0
     svelte: ^3.24.1
     svelte-icons: ^2.1.0
+    svelte-preprocess-postcss: ^1.1.1
   languageName: unknown
   linkType: soft
 

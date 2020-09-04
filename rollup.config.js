@@ -9,6 +9,7 @@ import postcss from 'rollup-plugin-postcss';
 import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import progress from 'rollup-plugin-progress';
+import sveltePreprocessPostcss from 'svelte-preprocess-postcss';
 import md5 from 'md5';
 
 const PRODUCTION = !process.env.ROLLUP_WATCH;
@@ -30,6 +31,9 @@ export default {
         const hash = md5(css.code).slice(0, 8);
         css.write(`styles.${hash}.css`, DEVELOPMENT);
       },
+      preprocess: {
+        style: sveltePreprocessPostcss(),
+      },
     }),
     html({
       title: 'Где поесть? | Карта',
@@ -40,9 +44,7 @@ export default {
       ],
       publicPath: '/',
     }),
-    postcss({
-      plugins: [],
-    }),
+    postcss(),
     babel({ babelHelpers: 'bundled' }),
     replace({
       'process.env.NODE_ENV': JSON.stringify(
