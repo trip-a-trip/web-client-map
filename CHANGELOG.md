@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.13](https://github.com/trip-a-trip/web-client-map/compare/v0.1.12...v0.1.13) (2020-09-04)
+
+### Bug Fixes
+
+- fix safary ios zoom on dounble tap ([031b68c](https://github.com/trip-a-trip/web-client-map/commit/031b68cac6bf2acb182eb183a8588dc5deae1492))
+
 ### [0.1.12](https://github.com/trip-a-trip/web-client-map/compare/v0.1.11...v0.1.12) (2020-09-04)
 
 ### Bug Fixes
