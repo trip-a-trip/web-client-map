@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.12](https://github.com/trip-a-trip/web-client-map/compare/v0.1.11...v0.1.12) (2020-09-04)
+
+### Bug Fixes
+
+- fix ios safary bug with 100vh ([e3505a2](https://github.com/trip-a-trip/web-client-map/commit/e3505a2566f41690e825c97b1cdd3621622e4671))
+
 ### [0.1.11](https://github.com/trip-a-trip/web-client-map/compare/v0.1.10...v0.1.11) (2020-09-04)
 
 ### [0.1.10](https://github.com/trip-a-trip/web-client-map/compare/v0.1.9...v0.1.10) (2020-09-04)
