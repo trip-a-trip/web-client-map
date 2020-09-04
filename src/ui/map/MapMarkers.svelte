@@ -2,7 +2,7 @@
   import * as Leaflet from 'leaflet';
   import { MarkerClusterGroup } from 'leaflet.markercluster';
   import { createEventDispatcher } from 'svelte';
-  
+
   import 'leaflet.markercluster/dist/MarkerCluster.css';
 
   export let map;
@@ -16,14 +16,16 @@
 
   $: {
     // remove old markers
-    map?.removeLayer(cluster);
+    if (map) {
+      map.removeLayer(cluster);
+    }
 
     // add new markers
     cluster = new MarkerClusterGroup({
       showCoverageOnHover: false,
-      iconCreateFunction: (cluster) =>
+      iconCreateFunction: (info) =>
         L.divIcon({
-          html: `<span class="map-cluster">${cluster.getChildCount()}</span>`,
+          html: `<span class="map-cluster">${info.getChildCount()}</span>`,
         }),
     });
 
@@ -38,7 +40,9 @@
         .on('click', () => dispatch('select', item));
     });
 
-    map?.addLayer(cluster);
+    if (map) {
+      map.addLayer(cluster);
+    }
   }
 </script>
 
