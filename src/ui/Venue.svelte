@@ -4,16 +4,6 @@
   export let item;
 
   const dispatch = createEventDispatcher();
-
-  $: console.log(item, item?.isAmazing, item?.isExpensive)
-
-  $: title = [item?.name, item?.isAmazing && '😍', item?.isExpensive && '💸']
-    .filter(Boolean)
-    .join(' ');
-
-  function handleClose() {
-    dispatch('close');
-  }
 </script>
 
 <style>
@@ -42,10 +32,14 @@
 
 {#if item}
   <article>
-    <h2>{title}</h2>
+    <h2>
+      {#if item.isExpensive}💸{/if}
+      {#if item.isAmazing}😍{/if}
+      {item.name}
+    </h2>
     {#if item.description}
       <p>{item.description}</p>
     {/if}
-    <button on:click={handleClose}>Close</button>
+    <button on:click={() => dispatch('close')}>Close</button>
   </article>
 {/if}
