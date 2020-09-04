@@ -23,12 +23,13 @@
   .controls {
     position: absolute;
 
-    right: 28px;
-    bottom: 28px;
+    right: var(--space);
+    bottom: var(--space);
     z-index: 2;
 
     display: grid;
     grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
   }
 
   .controls > button {
@@ -37,7 +38,6 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    margin: 4px;
 
     color: var(--ink_400);
     cursor: pointer;

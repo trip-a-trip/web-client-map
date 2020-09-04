@@ -10,15 +10,15 @@
 
   header {
     position: absolute;
-    top: 32px;
-    right: 32px;
+    top: var(--space);
+    right: var(--space);
     z-index: 2;
     display: grid;
     grid-template-rows: repeat(2, auto);
     gap: 16px;
     justify-content: start;
-    min-width: 300px;
-    padding: 32px;
+    min-width: 240px;
+    padding: var(--space);
     background-color: white;
     border-radius: 4px;
     box-shadow: var(--shadow);
@@ -27,7 +27,7 @@
   @media (max-width: 768px) {
     header {
       justify-content: center;
-      width: calc(100vw - 128px);
+      width: calc(100vw - (4 * var(--space)));
       min-width: 100px;
     }
   }

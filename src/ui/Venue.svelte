@@ -14,11 +14,11 @@
 
   article {
     position: absolute;
-    top: 32px;
-    left: 32px;
+    top: var(--space);
+    left: var(--space);
     z-index: 2;
-    width: 360px;
-    padding: 32px;
+    width: 320px;
+    padding: var(--space);
     background: white;
     border-radius: 4px;
     box-shadow: var(--shadow);
@@ -26,8 +26,8 @@
 
   @media (max-width: 768px) {
     article {
-      top: 205px;
-      width: calc(100vw - 128px);
+      top: calc(106px + (2 * var(--space)));
+      width: calc(100vw - (4 * var(--space)));
     }
   }
 </style>

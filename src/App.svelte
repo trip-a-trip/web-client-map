@@ -32,7 +32,14 @@
     --purple_500: #b983f1;
     --purple_300: #cea8f5;
 
+    --space: 32px;
+
     --shadow: 0 6px 9px rgba(0, 0, 0, 0.08);
+  }
+  @media (max-width: 768px) {
+    * {
+      --space: 16px;
+    }
   }
 
   :global(body) {
