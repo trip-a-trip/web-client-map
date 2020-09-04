@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.14](https://github.com/trip-a-trip/web-client-map/compare/v0.1.13...v0.1.14) (2020-09-04)
+
+### Features
+
+- make styles more fancy ([2921336](https://github.com/trip-a-trip/web-client-map/commit/2921336548b2a4af750f54c119bf82f2d2b071d7))
+
 ### [0.1.13](https://github.com/trip-a-trip/web-client-map/compare/v0.1.12...v0.1.13) (2020-09-04)
 
 ### Bug Fixes
