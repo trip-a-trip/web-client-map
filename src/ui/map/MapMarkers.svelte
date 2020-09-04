@@ -48,28 +48,28 @@
 
 <style>
   :global(.map-marker) {
-    background-color: var(--purple_300);
-    border: white 2px solid;
-    border-radius: 20px;
+    position: relative;
+    top: -5px;
+    left: -5px;
     display: flex;
     width: 20px;
     height: 20px;
-    position: relative;
-    left: -5px;
-    top: -5px;
+    background-color: var(--purple_300);
+    border: white 2px solid;
+    border-radius: 20px;
   }
 
   :global(.map-cluster) {
+    position: relative;
+    top: -12px;
+    left: -12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
     background-color: white;
     border: var(--purple_300) 2px solid;
     border-radius: 32px;
-    width: 32px;
-    height: 32px;
-    position: relative;
-    left: -12px;
-    top: -12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 </style>
