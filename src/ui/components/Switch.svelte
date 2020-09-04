@@ -70,9 +70,8 @@
     background: var(--purple_500);
   }
 
-  /* Hover/Active */
-  .container:hover input:not(:disabled) ~ .switch,
-  .container:active input:not(:disabled) ~ .switch {
+  /* Hover */
+  .container:hover input:not(:disabled) ~ .switch {
     background: var(--purple_300);
   }
 </style>
