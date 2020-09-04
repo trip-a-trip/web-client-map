@@ -28,6 +28,7 @@
     header {
       justify-content: center;
       width: calc(100vw - 128px);
+      min-width: 100px;
     }
   }
 </style>
