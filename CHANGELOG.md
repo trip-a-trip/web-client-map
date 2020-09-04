@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.18](https://github.com/trip-a-trip/web-client-map/compare/v0.1.17...v0.1.18) (2020-09-04)
+
+### Bug Fixes
+
+- descrease min width of header on mobile ([a917bff](https://github.com/trip-a-trip/web-client-map/commit/a917bff3ce1c027730f226c27a9ce0dda87f269a))
+
 ### [0.1.17](https://github.com/trip-a-trip/web-client-map/compare/v0.1.16...v0.1.17) (2020-09-04)
 
 ### Bug Fixes
