@@ -23,6 +23,8 @@
     --ink_800: #0c131d;
     --ink_500: #5a6472;
     --ink_400: #9ea9b7;
+
+    --shadow: 0 6px 9px rgba(0, 0, 0, 0.08);
   }
 
   :global(body) {

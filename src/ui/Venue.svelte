@@ -1,5 +1,6 @@
 <script>
   import { createEventDispatcher } from 'svelte';
+  import { fly } from 'svelte/transition';
 
   export let item;
 
@@ -20,6 +21,7 @@
     padding: 32px;
     background: white;
     border-radius: 4px;
+    box-shadow: var(--shadow);
   }
 
   @media (max-width: 768px) {
@@ -31,7 +33,7 @@
 </style>
 
 {#if item}
-  <article>
+  <article transition:fly>
     <h2>
       {#if item.isExpensive}💸{/if}
       {#if item.isAmazing}😍{/if}

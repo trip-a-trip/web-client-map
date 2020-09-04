@@ -38,6 +38,7 @@
     width: 40px;
     height: 40px;
     margin: 4px;
+    box-shadow: var(--shadow);
 
     color: var(--ink_400);
     cursor: pointer;

@@ -19,6 +19,7 @@
     padding-left: 32px;
     background-color: white;
     border-radius: 4px;
+    box-shadow: var(--shadow);
   }
 
   @media (max-width: 768px) {
