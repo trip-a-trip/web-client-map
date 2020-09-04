@@ -57,12 +57,13 @@ export default {
       browser: true,
       dedupe: ['svelte'],
     }),
-    commonjs(),
-    cleaner({
-      targets: [DIST],
-    }),
     DEVELOPMENT && serve(DIST),
     DEVELOPMENT && livereload(DIST),
+    commonjs(),
+    PRODUCTION &&
+      cleaner({
+        targets: [DIST],
+      }),
     PRODUCTION && terser(),
   ],
   watch: {
