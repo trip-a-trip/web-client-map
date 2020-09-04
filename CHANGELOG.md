@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.16](https://github.com/trip-a-trip/web-client-map/compare/v0.1.15...v0.1.16) (2020-09-04)
+
+### Features
+
+- add only amazing toggle ([5fafed5](https://github.com/trip-a-trip/web-client-map/commit/5fafed57b20b6901a4da937f2eecffb48404aa4a))
+
 ### [0.1.15](https://github.com/trip-a-trip/web-client-map/compare/v0.1.14...v0.1.15) (2020-09-04)
 
 ### Bug Fixes
