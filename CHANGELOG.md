@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.19](https://github.com/trip-a-trip/web-client-map/compare/v0.1.18...v0.1.19) (2020-09-04)
+
+### Features
+
+- add clustering ([8126d7b](https://github.com/trip-a-trip/web-client-map/commit/8126d7b596deec809104dc1e8f724e8d5e122528))
+- add links and close button ([2707a79](https://github.com/trip-a-trip/web-client-map/commit/2707a79544fd3a547616767a9369cf3f5aa20e80))
+- add venue kind display ([19a1c50](https://github.com/trip-a-trip/web-client-map/commit/19a1c507a496fd3804673fa7478edd2bd5f400d7))
+- make space responsive ([7332b59](https://github.com/trip-a-trip/web-client-map/commit/7332b59b5efec966cd18290fc9d8cede2a76799b))
+
+### Bug Fixes
+
+- remove active state on switch ([60492ae](https://github.com/trip-a-trip/web-client-map/commit/60492ae6af8b97f070feaf6e013e2453ee113ebc))
+
 ### [0.1.18](https://github.com/trip-a-trip/web-client-map/compare/v0.1.17...v0.1.18) (2020-09-04)
 
 ### Bug Fixes
