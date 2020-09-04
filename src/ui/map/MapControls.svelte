@@ -6,15 +6,7 @@
 
   const dispatch = createEventDispatcher();
 
-  function onZoomIn() {
-    dispatch('zoomIn');
-  }
-
-  function onZoomOut() {
-    dispatch('zoomOut');
-  }
-
-  async function onNewPosition() {
+  async function handleNewPositionClick() {
     if (!navigator.geolocation) {
       return;
     }
@@ -64,13 +56,13 @@
 </style>
 
 <section class="controls">
-  <button on:click={onZoomIn}>
+  <button on:click={() => dispatch('zoomIn')}>
     <TiPlus />
   </button>
-  <button on:click={onZoomOut}>
+  <button on:click={() => dispatch('zoomOut')}>
     <TiMinus />
   </button>
-  <button on:click={onNewPosition}>
+  <button on:click={handleNewPositionClick}>
     <TiLocationArrow />
   </button>
 </section>

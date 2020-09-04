@@ -3,7 +3,7 @@
   import { provideStoreon, useStoreon } from '@storeon/svelte';
 
   import { store } from './store';
-  import Map from './ui/Map.svelte';
+  import Map from './ui/map/Map.svelte';
   import Header from './ui/Header.svelte';
   import Venue from './ui/Venue.svelte';
 
