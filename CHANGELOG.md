@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/trip-a-trip/web-client-map/compare/v0.1.21...v1.0.1) (2020-09-04)
+
+### Bug Fixes
+
+- make api url relative ([c31a6ce](https://github.com/trip-a-trip/web-client-map/commit/c31a6ce49ff958f3235bd1c49b163861809707a1))
+
 ### [0.1.21](https://github.com/trip-a-trip/web-client-map/compare/v0.1.20...v0.1.21) (2020-09-04)
 
 ### Bug Fixes
