@@ -2,7 +2,10 @@
   import { createEventDispatcher } from 'svelte';
   import { fly } from 'svelte/transition';
 
-  import Kind from './Kind.svelte'
+  import Address from './Address.svelte';
+  import Kind from './Kind.svelte';
+  import Links from './Links.svelte';
+  import Close from './Close.svelte';
 
   export let item;
 
@@ -41,11 +44,19 @@
       {#if item.isAmazing}😍{/if}
       {item.name}
     </h2>
+
+    <Links links={item.links} />
+
     {#if item.description}
       <p>{item.description}</p>
     {/if}
 
     <Kind elements={item.kind} />
-    <button on:click={() => dispatch('close')}>Close</button>
+
+    {#if item.address}
+      <Address address={item.address} />
+    {/if}
+
+    <Close on:click={() => dispatch('close')} />
   </article>
 {/if}

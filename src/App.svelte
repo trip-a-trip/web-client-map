@@ -28,6 +28,9 @@
     --ink_800: #0c131d;
     --ink_500: #5a6472;
     --ink_400: #9ea9b7;
+    --ink_300: #cdd4de;
+    --ink_50: #eff1f4;
+    --ink_25: #f6f7f9;
 
     --purple_500: #b983f1;
     --purple_300: #cea8f5;
