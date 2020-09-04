@@ -12,8 +12,6 @@
 
   const dispatch = createEventDispatcher();
 
-  const markers = {};
-
   $: {
     // remove old markers
     if (map) {
@@ -30,12 +28,9 @@
     });
 
     items.forEach((item) => {
-      markers[item.id] = Leaflet.marker(
-        [item.coordinates.latitude, item.coordinates.longitude],
-        {
-          icon: Leaflet.divIcon({ html: `<span class="map-marker"></span>` }),
-        },
-      )
+      Leaflet.marker([item.coordinates.latitude, item.coordinates.longitude], {
+        icon: Leaflet.divIcon({ html: `<span class="map-marker"></span>` }),
+      })
         .addTo(cluster)
         .on('click', () => dispatch('select', item));
     });
