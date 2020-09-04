@@ -5,6 +5,8 @@
 
   const dispatch = createEventDispatcher();
 
+  $: console.log(item, item?.isAmazing, item?.isExpensive)
+
   $: title = [item?.name, item?.isAmazing && '😍', item?.isExpensive && '💸']
     .filter(Boolean)
     .join(' ');
