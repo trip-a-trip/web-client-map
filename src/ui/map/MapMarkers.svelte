@@ -12,9 +12,8 @@
   $: {
     // remove old markers
     Object.entries(markers)
-      .filter(([markerId]) => items.map((item) => item.id).includes(markerId))
       .forEach(([markerId, marker]) => {
-        marker.remove();
+        marker?.remove();
         markers[markerId] = null;
       });
 

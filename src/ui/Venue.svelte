@@ -26,7 +26,7 @@
 
   @media (max-width: 768px) {
     article {
-      top: 151px;
+      top: 205px;
       width: calc(100vw - 128px);
     }
   }
