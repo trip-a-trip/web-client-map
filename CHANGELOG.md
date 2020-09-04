@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.21](https://github.com/trip-a-trip/web-client-map/compare/v0.1.20...v0.1.21) (2020-09-04)
+
+### Bug Fixes
+
+- repalce il emoji by text ([a370ad9](https://github.com/trip-a-trip/web-client-map/commit/a370ad95f0e133394821d54f4fcaeabf2f0b0257))
+
 ### [0.1.20](https://github.com/trip-a-trip/web-client-map/compare/v0.1.19...v0.1.20) (2020-09-04)
 
 ### Bug Fixes
