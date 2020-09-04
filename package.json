@@ -70,7 +70,7 @@
   "size-limit": [
     {
       "path": "public/index.*.js",
-      "limit": "48.8 KB"
+      "limit": "50 KB"
     },
     {
       "path": "public/styles.*.css",
