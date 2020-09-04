@@ -9,28 +9,25 @@
   };
 
   const listDisplayMap = {
-    'bite-drink': 'выпить чаю/кофе',
-    breakfast: 'позавтракать',
-    lunch: 'пообедать',
-    dinner: 'поужинать',
+    'bite-drink': '☕️ выпить чаю/кофе',
+    breakfast: '🍳 позавтракать',
+    lunch: '🥙 пообедать',
+    dinner: '🍗 поужинать',
   };
 </script>
 
 <style>
-  li.bite-drink {
-    list-style-type: '☕️ ';
+  p {
+    margin-block-end: 0.5em;
   }
 
-  li.breakfast {
-    list-style-type: '🍳 ';
+  ul {
+    margin-block-start: 0.5em;
+    padding-inline-start: 12px;
   }
 
-  li.lunch {
-    list-style-type: '🥙 ';
-  }
-
-  li.dinner {
-    list-style-type: '🍗 ';
+  li {
+    list-style-type: none;
   }
 </style>
 
