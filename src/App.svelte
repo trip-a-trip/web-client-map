@@ -32,8 +32,10 @@
     --ink_50: #eff1f4;
     --ink_25: #f6f7f9;
 
+    --purple_800: #a266eb;
     --purple_500: #b983f1;
     --purple_300: #cea8f5;
+    --purple_50: #f7f0fd;
 
     --space: 32px;
 

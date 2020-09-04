@@ -65,6 +65,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastify-static", "npm:3.2.0"],
             ["husky", "npm:4.2.5"],
             ["leaflet", "npm:1.6.0"],
+            ["leaflet.markercluster", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:1.4.1"],
             ["lint-staged", "npm:10.2.13"],
             ["md5", "npm:2.3.0"],
             ["postcss", "npm:7.0.32"],
@@ -6528,6 +6529,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["leaflet.markercluster", [
+        ["virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:1.4.1", {
+          "packageLocation": "./.yarn/$$virtual/leaflet.markercluster-virtual-fb00d76123/0/cache/leaflet.markercluster-npm-1.4.1-d1621bff54-6f1ea023e9.zip/node_modules/leaflet.markercluster/",
+          "packageDependencies": [
+            ["leaflet.markercluster", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:1.4.1"],
+            ["@types/leaflet", null],
+            ["leaflet", "npm:1.6.0"]
+          ],
+          "packagePeers": [
+            "@types/leaflet",
+            "leaflet"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["levn", [
         ["npm:0.3.0", {
           "packageLocation": "./.yarn/cache/levn-npm-0.3.0-48d774b1c2-775861da38.zip/node_modules/levn/",
@@ -11804,6 +11820,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastify-static", "npm:3.2.0"],
             ["husky", "npm:4.2.5"],
             ["leaflet", "npm:1.6.0"],
+            ["leaflet.markercluster", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:1.4.1"],
             ["lint-staged", "npm:10.2.13"],
             ["md5", "npm:2.3.0"],
             ["postcss", "npm:7.0.32"],

@@ -1,9 +1,14 @@
 <script>
   import * as Leaflet from 'leaflet';
+  import { MarkerClusterGroup } from 'leaflet.markercluster';
   import { createEventDispatcher } from 'svelte';
+  
+  import 'leaflet.markercluster/dist/MarkerCluster.css';
 
   export let map;
   export let items = [];
+
+  let cluster;
 
   const dispatch = createEventDispatcher();
 
@@ -11,31 +16,56 @@
 
   $: {
     // remove old markers
-    Object.entries(markers).forEach(([markerId, marker]) => {
-      if (marker) {
-        marker.remove();
-      }
-      markers[markerId] = null;
-    });
+    map?.removeLayer(cluster);
 
     // add new markers
+    cluster = new MarkerClusterGroup({
+      showCoverageOnHover: false,
+      iconCreateFunction: (cluster) =>
+        L.divIcon({
+          html: `<span class="map-cluster">${cluster.getChildCount()}</span>`,
+        }),
+    });
+
     items.forEach((item) => {
       markers[item.id] = Leaflet.marker(
         [item.coordinates.latitude, item.coordinates.longitude],
         {
-          icon: Leaflet.divIcon({ className: 'map-marker' }),
+          icon: Leaflet.divIcon({ html: `<span class="map-marker"></span>` }),
         },
       )
-        .addTo(map)
+        .addTo(cluster)
         .on('click', () => dispatch('select', item));
     });
+
+    map?.addLayer(cluster);
   }
 </script>
 
 <style>
   :global(.map-marker) {
+    background-color: var(--purple_300);
+    border: white 2px solid;
+    border-radius: 20px;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: -5px;
+    top: -5px;
+  }
+
+  :global(.map-cluster) {
     background-color: white;
-    border: var(--ink_400) 1px solid;
-    border-radius: 10px;
+    border: var(--purple_300) 2px solid;
+    border-radius: 32px;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    left: -12px;
+    top: -12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>

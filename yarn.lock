@@ -5718,6 +5718,15 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"leaflet.markercluster@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "leaflet.markercluster@npm:1.4.1"
+  peerDependencies:
+    leaflet: ~1.3.1
+  checksum: 6f1ea023e95a9f5ca55b6eeb441ecb7ee257412b0ece870af14b0aa0afc9dcf78da0fb5ada22a443eee368ed4de3e9285cfdbab09c8e74f50fa8f512ba4f09b0
+  languageName: node
+  linkType: hard
+
 "leaflet@npm:^1.6.0":
   version: 1.6.0
   resolution: "leaflet@npm:1.6.0"
@@ -10470,6 +10479,7 @@ fsevents@~2.1.2:
     fastify-static: ^3.2.0
     husky: ^4.2.5
     leaflet: ^1.6.0
+    leaflet.markercluster: ^1.4.1
     lint-staged: ^10.1.3
     md5: ^2.3.0
     postcss: ^7.0.32
