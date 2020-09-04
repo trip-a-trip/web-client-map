@@ -24,6 +24,10 @@
     --ink_500: #5a6472;
     --ink_400: #9ea9b7;
   }
+
+  :global(body) {
+    touch-action: manipulation;
+  }
 </style>
 
 <main>
