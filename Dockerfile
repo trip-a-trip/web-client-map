@@ -10,6 +10,8 @@ RUN yarn build
 
 FROM nginx:1.19-alpine
 
-COPY ./trip.conf.template /etc/nginx/templates/trip.conf.template
+COPY ./default.conf.template /etc/nginx/templates/default.conf.template
 
 COPY --from=build /app/public /srv/www
+
+EXPOSE 8080
