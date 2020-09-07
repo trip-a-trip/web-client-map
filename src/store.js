@@ -9,7 +9,7 @@ const venuesStore = (store) => {
   store.on('venues/fetched', (_, venues) => ({ venues }));
 
   store.on('venues/requested', async () => {
-    const { data } = await axios.get('/api/venue/list');
+    const { data } = await axios.get('/v1/venue/list');
 
     store.dispatch('venues/fetched', data);
   });

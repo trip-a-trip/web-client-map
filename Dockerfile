@@ -1,4 +1,6 @@
-FROM node:12-alpine
+FROM node:12-alpine as build
+
+WORKDIR /app
 
 ENV NODE_ENV=production
 
@@ -6,6 +8,8 @@ COPY . .
 RUN yarn
 RUN yarn build
 
-EXPOSE 8080
+FROM nginx:1.19-alpine
 
-CMD ["yarn", "node", "./proxy.js"]
+COPY ./trip.conf.template /etc/nginx/templates/trip.conf.template
+
+COPY --from=build /app/public /srv/www
