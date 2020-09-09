@@ -1,6 +1,9 @@
 <script>
   import * as Leaflet from 'leaflet';
   import 'leaflet/dist/leaflet.css';
+  import { createEventDispatcher } from 'svelte';
+
+  const dispatch = createEventDispatcher();
 
   import MapControls from './MapControls.svelte';
   import MapMarkers from './MapMarkers.svelte';
@@ -22,6 +25,8 @@
     Leaflet.tileLayer(
       'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     ).addTo(map);
+
+    map.on('click', () => dispatch('click')); 
 
     return {
       destroy: () => {

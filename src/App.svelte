@@ -63,6 +63,7 @@
 
   <Map
     on:select={({ detail }) => store.dispatch('active/selected', detail)}
+    on:click={() => store.dispatch('active/unselected')}
     {items} />
 
   <Venue on:close={() => store.dispatch('active/unselected')} item={$active} />
