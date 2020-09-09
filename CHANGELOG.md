@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/trip-a-trip/web-client-map/compare/v1.0.4...v1.1.0) (2020-09-09)
+
+### Features
+
+- unselect item on map click ([3890f1c](https://github.com/trip-a-trip/web-client-map/commit/3890f1c4532b11a69f430e285cc54929500f97a6))
+
 ### [1.0.4](https://github.com/trip-a-trip/web-client-map/compare/v1.0.2...v1.0.4) (2020-09-07)
 
 ### Bug Fixes
