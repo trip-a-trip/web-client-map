@@ -1,15 +1,10 @@
 <script>
-  import { createEventDispatcher } from 'svelte';
-  import { fly } from 'svelte/transition';
-
   import Card from '../components/Card.svelte';
   import Address from './Address.svelte';
   import Kind from './Kind.svelte';
   import Links from './Links.svelte';
 
   export let item;
-
-  const dispatch = createEventDispatcher();
 </script>
 
 <style>
