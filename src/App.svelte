@@ -7,6 +7,7 @@
   import Header from './ui/Header.svelte';
   import Venue from './ui/venue/Venue.svelte';
   import Switch from './ui/components/Switch.svelte';
+  import Info from './ui/Info.svelte';
 
   provideStoreon(store);
 
@@ -66,8 +67,9 @@
 
   <Map
     on:select={({ detail }) => store.dispatch('active/selected', detail)}
-    on:click={() => store.dispatch('active/unselected')}
     {items} />
 
   <Venue on:close={() => store.dispatch('active/unselected')} item={$active} />
+
+  <Info />
 </main>

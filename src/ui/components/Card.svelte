@@ -3,10 +3,15 @@
   import { createEventDispatcher } from 'svelte';
 
   import Close from './Close.svelte';
+  import { clickOutside } from '../utils/click_outside';
 
   const dispatch = createEventDispatcher();
 
-  export let closable = false;
+  export let closeable = false;
+
+  function handleClose() {
+    dispatch('close');
+  }
 </script>
 
 <style>
@@ -20,10 +25,14 @@
   }
 </style>
 
-<div class="card" transition:fly>
+<div
+  class="card"
+  transition:fly
+  use:clickOutside
+  on:clickOutside={handleClose}>
   <slot />
 
-  {#if closable}
-    <Close on:click={() => dispatch('close')} />
+  {#if closeable}
+    <Close on:click={handleClose} />
   {/if}
 </div>

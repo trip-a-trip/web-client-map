@@ -35,7 +35,7 @@
 
 {#if item}
   <article>
-    <Card closable on:close>
+    <Card closeable on:close>
       <h2>
         {#if item.isExpensive}💸{/if}
         {#if item.isAmazing}😍{/if}
