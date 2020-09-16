@@ -46,6 +46,9 @@
       --space: 16px;
     }
   }
+  :global(*) {
+    box-sizing: border-box;
+  }
 
   :global(body) {
     touch-action: manipulation;

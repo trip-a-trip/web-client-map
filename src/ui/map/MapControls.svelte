@@ -4,6 +4,8 @@
   import TiPlus from 'svelte-icons/ti/TiPlus.svelte';
   import TiMinus from 'svelte-icons/ti/TiMinus.svelte';
 
+  import RoundButton from '../components/RoundButton.svelte';
+
   const dispatch = createEventDispatcher();
 
   async function handleNewPositionClick() {
@@ -31,39 +33,16 @@
     grid-template-rows: repeat(3, 1fr);
     gap: 8px;
   }
-
-  .controls > button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-
-    color: var(--ink_400);
-    cursor: pointer;
-    background-color: white;
-    border: none;
-    border-radius: 40px;
-    box-shadow: var(--shadow);
-  }
-
-  .controls > button:hover {
-    color: var(--ink_500);
-  }
-
-  .controls > button:active {
-    color: var(--ink_800);
-  }
 </style>
 
 <section class="controls">
-  <button on:click={() => dispatch('zoomIn')}>
+  <RoundButton on:click={() => dispatch('zoomIn')}>
     <TiPlus />
-  </button>
-  <button on:click={() => dispatch('zoomOut')}>
+  </RoundButton>
+  <RoundButton on:click={() => dispatch('zoomOut')}>
     <TiMinus />
-  </button>
-  <button on:click={handleNewPositionClick}>
+  </RoundButton>
+  <RoundButton on:click={handleNewPositionClick}>
     <TiLocationArrow />
-  </button>
+  </RoundButton>
 </section>
