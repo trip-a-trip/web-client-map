@@ -18,6 +18,8 @@
     background-color: var(--ink_25);
     border: none;
     border-radius: 36px;
+    transition-duration:  0.2s;
+    transition-property: color, background-color;
   }
 
   button:hover {

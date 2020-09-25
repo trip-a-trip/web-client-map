@@ -15,6 +15,7 @@
     border: none;
     border-radius: 40px;
     box-shadow: var(--shadow);
+    transition: color 0.2s;
   }
 
   button:hover {
