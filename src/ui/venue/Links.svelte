@@ -4,6 +4,15 @@
   export let links = [];
 </script>
 
+<style>
+  p {
+    display: inline-grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 8px;
+    margin-bottom: 0;
+  }
+</style>
+
 {#if links.length > 0}
   <p>
     {#each links as link}
