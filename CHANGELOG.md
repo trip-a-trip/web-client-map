@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/trip-a-trip/web-client-map/compare/v1.2.1...v1.3.0) (2020-09-25)
+
+### Features
+
+- add buttons animations ([d2bd25a](https://github.com/trip-a-trip/web-client-map/commit/d2bd25a35b3c069cfd9b5189c0ec3ddfa231ceba))
+- add venues list refetch after error ([94e2c86](https://github.com/trip-a-trip/web-client-map/commit/94e2c865354d51767178e67b18fc8b65762fcb68))
+
+### Bug Fixes
+
+- add gap between links ([614fd72](https://github.com/trip-a-trip/web-client-map/commit/614fd72b2f0778f4a6abc2ba1e4a438ab62efd54))
+- now text doesn't overlaped by cross ([224261e](https://github.com/trip-a-trip/web-client-map/commit/224261e1668d4d791f3f95cfb04f682d04f7129c))
+
 ### [1.2.1](https://github.com/trip-a-trip/web-client-map/compare/v1.2.0...v1.2.1) (2020-09-16)
 
 ### Bug Fixes
