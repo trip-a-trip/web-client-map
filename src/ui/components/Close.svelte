@@ -18,7 +18,7 @@
     background-color: var(--ink_25);
     border: none;
     border-radius: 36px;
-    transition-duration:  0.2s;
+    transition-duration: 0.2s;
     transition-property: color, background-color;
   }
 
@@ -26,6 +26,15 @@
     color: var(--ink_400);
     background-color: var(--ink_50);
   }
+
+  .close-holder {
+    float: right;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+  }
 </style>
+
+<div class="close-holder" />
 
 <button on:click><TiTimes /></button>

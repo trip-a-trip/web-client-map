@@ -30,9 +30,11 @@
   transition:fly
   use:clickOutside
   on:clickOutside={handleClose}>
-  <slot />
 
   {#if closeable}
     <Close on:click={handleClose} />
   {/if}
+
+  <slot />
+
 </div>
