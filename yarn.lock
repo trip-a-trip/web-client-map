@@ -3,7 +3,7 @@
 
 __metadata:
   version: 4
-  cacheKey: 6
+  cacheKey: 7
 
 "@arcanis/slice-ansi@npm:^1.0.2":
   version: 1.0.2
@@ -158,6 +158,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/helper-validator-identifier@npm:^7.12.11":
+  version: 7.12.11
+  resolution: "@babel/helper-validator-identifier@npm:7.12.11"
+  checksum: 18de432203264b501db2690b53370a4289dc56084f5a2c66de624b159ee28b8abaeb402b2b7584296d9261645d91ddb6bfd21125d3ffd9bf02e9262e77baf3d2
+  languageName: node
+  linkType: hard
+
 "@babel/helpers@npm:^7.10.4":
   version: 7.10.4
   resolution: "@babel/helpers@npm:7.10.4"
@@ -225,6 +232,17 @@ __metadata:
     lodash: ^4.17.19
     to-fast-properties: ^2.0.0
   checksum: a1515b3ed19a8499f1f27d2c90537803b3e77f6d100ef1c327c86f85817ad2d915a61ae777eaacd9d955999db4ea68d6bb3b5933e0611d3d18a6ffc95430f44a
+  languageName: node
+  linkType: hard
+
+"@babel/types@npm:^7.8.3":
+  version: 7.12.12
+  resolution: "@babel/types@npm:7.12.12"
+  dependencies:
+    "@babel/helper-validator-identifier": ^7.12.11
+    lodash: ^4.17.19
+    to-fast-properties: ^2.0.0
+  checksum: 928554396cb6b367e00cb6d41aee4ea0228872e8cda221d81abe786462799ecc63993f3c16845b30cd68e673269704f8007f4edc105a32c6d7e03e68a670a676
   languageName: node
   linkType: hard
 
@@ -568,16 +586,6 @@ __metadata:
   peerDependencies:
     size-limit: 4.5.7
   checksum: 7d4dfaa03fa7be1a7df61226d8e6124f702309857c76d9900795d26753a12166ffbead6c9e2f58782d017025d28ce7f4492eb46718ce597674e7e71cedf06134
-  languageName: node
-  linkType: hard
-
-"@storeon/svelte@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@storeon/svelte@npm:1.0.0"
-  peerDependencies:
-    storeon: ^3.0.0
-    svelte: ^3.20.0
-  checksum: cf478dfc74e21ca7aecd35ef4e4225920ef89cdff66a21c1b5e81f00b1f8a0d014760bcb83fe24276f5d3e112355874eb07c0d664fbda277e650bfec08c62aaf
   languageName: node
   linkType: hard
 
@@ -2983,6 +2991,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"effector@npm:^21.7.5":
+  version: 21.7.5
+  resolution: "effector@npm:21.7.5"
+  checksum: af5927f39b8eb3128e6109938852fe5c2078df4e7dd2ec9f569b0e181b8f54113046be479a36b01a48127fff4c1119e60b70691fcaf5f259f8fac48904179929
+  languageName: node
+  linkType: hard
+
 "electron-to-chromium@npm:^1.3.523":
   version: 1.3.558
   resolution: "electron-to-chromium@npm:1.3.558"
@@ -3804,10 +3819,10 @@ __metadata:
 
 "fsevents@patch:fsevents@~2.1.2#builtin<compat/fsevents>":
   version: 2.1.3
-  resolution: "fsevents@patch:fsevents@npm%3A2.1.3#builtin<compat/fsevents>::version=2.1.3&hash=87eb42"
+  resolution: "fsevents@patch:fsevents@npm%3A2.1.3#builtin<compat/fsevents>::version=2.1.3&hash=11e9ea"
   dependencies:
     node-gyp: latest
-  checksum: d8ae862048fc127cdbd00d02b2feb7c25946c3ce4cbc44e958134be87e239577a16dafafa1c270d010b8624e1b1e0372e23f7865c55c6f83e83fc9f68b0a30d2
+  checksum: e2b8c379340e21a786d32c653854c8876f94eb1202dd5be378fd42c062bc123aab5051c32bf0011865257c85982c41ded203f9fe8c9f9c8f8c84dc4672abc0e0
   languageName: node
   linkType: hard
 
@@ -8652,21 +8667,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"storeon@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "storeon@npm:3.0.3"
-  peerDependencies:
-    preact: ^10.0.0
-    react: ^16.8.0
-  peerDependenciesMeta:
-    preact:
-      optional: true
-    react:
-      optional: true
-  checksum: b04e0fb30d69015648f8b17e23cf913885064b96b408bd89e60b6d6e5d2673c44b62ba70b1cac0587b237ba83a4e01671c9e18dfd89a0a65cc4158d4eb621528
-  languageName: node
-  linkType: hard
-
 "stream-buffers@npm:^3.0.2":
   version: 3.0.2
   resolution: "stream-buffers@npm:3.0.2"
@@ -9755,11 +9755,11 @@ fsevents@~2.1.2:
     "@rollup/plugin-node-resolve": ^9.0.0
     "@rollup/plugin-replace": ^2.3.3
     "@size-limit/file": ^4.5.7
-    "@storeon/svelte": ^1.0.0
     "@yarnpkg/pnpify": ^2.2.1
     babel-eslint: ^10.1.0
     commitizen: ^4.0.4
     cz-conventional-changelog: ^3.1.0
+    effector: ^21.7.5
     eslint: ^6.8.0
     eslint-config-airbnb-base: ^14.1.0
     eslint-config-prettier: ^6.10.1
@@ -9788,7 +9788,6 @@ fsevents@~2.1.2:
     rollup-plugin-terser: ^7.0.1
     size-limit: ^4.5.7
     standard-version: ^7.1.0
-    storeon: ^3.0.3
     stylelint: ^13.3.1
     stylelint-config-recess-order: ^2.0.4
     stylelint-config-recommended: ^3.0.0

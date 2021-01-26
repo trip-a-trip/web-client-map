@@ -1,6 +1,28 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
+
+  const dispatch = createEventDispatcher();
+
   export let value = false;
+
+  $: {
+    if (value) {
+      dispatch('check')
+    } else {
+      dispatch('uncheck')
+    }
+  }
 </script>
+
+<label class="container">
+  <input type="checkbox" bind:checked={value} />
+
+  <span class="switch" />
+
+  <span class="label">
+    <slot />
+  </span>
+</label>
 
 <style>
   .container {
@@ -75,13 +97,3 @@
     background: var(--purple_300);
   }
 </style>
-
-<label class="container">
-  <input type="checkbox" bind:checked={value} />
-
-  <span class="switch" />
-
-  <span class="label">
-    <slot />
-  </span>
-</label>

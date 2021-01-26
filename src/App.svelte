@@ -1,25 +1,41 @@
 <script>
   import { onMount } from 'svelte';
-  import { provideStoreon, useStoreon } from '@storeon/svelte';
 
-  import { store } from './store';
+  import {
+    $venues as venues,
+    $selectedVenue as selectedVenue,
+    $showOnlyAmazing as showOnlyAmazing,
+    selectVenue,
+    unselectVenue,
+    fetchVenuesFx,
+    enableAmazingFilter,
+    disableAmazingFilter,
+  } from './store';
   import Map from './ui/map/Map.svelte';
   import Header from './ui/Header.svelte';
   import Venue from './ui/venue/Venue.svelte';
   import Switch from './ui/components/Switch.svelte';
   import Info from './ui/Info.svelte';
 
-  provideStoreon(store);
-
-  let onlyAmazing = false;
-
-  const { venues } = useStoreon('venues');
-  const { active } = useStoreon('active');
-
-  onMount(() => store.dispatch('venues/requested'));
-
-  $: items = $venues.filter((item) => !onlyAmazing || item.isAmazing);
+  onMount(fetchVenuesFx);
 </script>
+
+<main>
+  <Header>
+    <Switch
+      value={$showOnlyAmazing}
+      on:check={enableAmazingFilter}
+      on:uncheck={disableAmazingFilter}
+    >Только эмейзинг</Switch
+    >
+  </Header>
+
+  <Map on:select={({ detail }) => selectVenue(detail)} items={$venues} />
+
+  <Venue on:close={unselectVenue} item={$selectedVenue} />
+
+  <Info />
+</main>
 
 <style>
   * {
@@ -59,17 +75,3 @@
     font-weight: 600;
   }
 </style>
-
-<main>
-  <Header>
-    <Switch bind:value={onlyAmazing}>Только эмейзинг</Switch>
-  </Header>
-
-  <Map
-    on:select={({ detail }) => store.dispatch('active/selected', detail)}
-    {items} />
-
-  <Venue on:close={() => store.dispatch('active/unselected')} item={$active} />
-
-  <Info />
-</main>

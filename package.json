@@ -15,11 +15,10 @@
     "release": "yarn standard-version"
   },
   "dependencies": {
-    "@storeon/svelte": "^1.0.0",
+    "effector": "^21.7.5",
     "leaflet": "^1.6.0",
     "leaflet.markercluster": "^1.4.1",
     "redaxios": "^0.3.0",
-    "storeon": "^3.0.3",
     "svelte": "^3.24.1",
     "svelte-icons": "^2.1.0"
   },
@@ -71,7 +70,7 @@
   "size-limit": [
     {
       "path": "public/*.js",
-      "limit": "60 KB"
+      "limit": "65 KB"
     },
     {
       "path": "public/*.css",
