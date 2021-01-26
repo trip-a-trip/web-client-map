@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.2](https://github.com/trip-a-trip/web-client-map/compare/v1.3.1...v1.3.2) (2021-01-26)
+
+### Bug Fixes
+
+- add miss first argument in selected handler ([43fb6ce](https://github.com/trip-a-trip/web-client-map/commit/43fb6ce25957e7b0fffa82e036bff8f5020e3754))
+
 ### [1.3.1](https://github.com/trip-a-trip/web-client-map/compare/v1.3.0...v1.3.1) (2021-01-26)
 
 ## [1.3.0](https://github.com/trip-a-trip/web-client-map/compare/v1.2.1...v1.3.0) (2020-09-25)
