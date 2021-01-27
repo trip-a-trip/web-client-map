@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/trip-a-trip/web-client-map/compare/v1.3.2...v1.4.0) (2021-01-27)
+
+### Features
+
+- **filters:** add hide expensive filter ([ba8bc9e](https://github.com/trip-a-trip/web-client-map/commit/ba8bc9eaac072df31a617af511e3e2e7ad948223))
+
 ### [1.3.2](https://github.com/trip-a-trip/web-client-map/compare/v1.3.1...v1.3.2) (2021-01-26)
 
 ### Bug Fixes
