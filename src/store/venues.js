@@ -1,7 +1,7 @@
 import { createEffect, restore, guard, combine } from 'effector';
 import axios from 'redaxios';
 
-import { $showOnlyAmazing } from './filters';
+import { $filters } from './filters';
 
 const REFETCH_THRESHOLD = 5;
 
@@ -29,9 +29,11 @@ const $allVenues = restore(fetchVenuesFx, []);
 
 const $venues = combine({
   venues: $allVenues,
-  onlyAmazing: $showOnlyAmazing,
-}).map(({ venues, onlyAmazing }) =>
-  venues.filter((item) => !onlyAmazing || item.isAmazing),
+  filters: $filters,
+}).map(({ venues, filters }) =>
+  venues
+    .filter((item) => !filters.showOnlyAmazing || item.isAmazing)
+    .filter((item) => !filters.hideExpensive || !item.isExpensive),
 );
 
 export { fetchVenuesFx, $venues };

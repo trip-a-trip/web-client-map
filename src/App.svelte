@@ -5,11 +5,14 @@
     $venues as venues,
     $selectedVenue as selectedVenue,
     $showOnlyAmazing as showOnlyAmazing,
+    $hideExpensive as hideExpensive,
     selectVenue,
     unselectVenue,
     fetchVenuesFx,
     enableAmazingFilter,
     disableAmazingFilter,
+    enableHideExpensiveFilter,
+    disableHideExpensiveFilter,
   } from './store';
   import Map from './ui/map/Map.svelte';
   import Header from './ui/Header.svelte';
@@ -25,8 +28,12 @@
     <Switch
       value={$showOnlyAmazing}
       on:check={enableAmazingFilter}
-      on:uncheck={disableAmazingFilter}
-    >Только эмейзинг</Switch
+      on:uncheck={disableAmazingFilter}>Только эмейзинг</Switch
+    >
+    <Switch
+      value={$hideExpensive}
+      on:check={enableHideExpensiveFilter}
+      on:uncheck={disableHideExpensiveFilter}>Скрыть дорогие</Switch
     >
   </Header>
 
