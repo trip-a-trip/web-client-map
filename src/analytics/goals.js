@@ -9,13 +9,13 @@ import { sendEvent } from './sendEvent';
 openInfoCard.watch(() => sendEvent('info-open'));
 
 enableAmazingFilter.watch(() =>
-  sendEvent('filter-enable', { props: { filter: 'amazing-filter' } }),
+  sendEvent('filter-enable', { filter: 'amazing-filter' }),
 );
 
 enableHideExpensiveFilter.watch(() =>
-  sendEvent('filter-enable', { props: { filter: 'expensive' } }),
+  sendEvent('filter-enable', { filter: 'expensive' }),
 );
 
 selectVenue.watch((venue) =>
-  sendEvent('venue-select', { props: { name: venue.name, id: venue.id } }),
+  sendEvent('venue-select', { name: venue.name, id: venue.id }),
 );
