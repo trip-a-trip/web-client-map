@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.2](https://github.com/trip-a-trip/web-client-map/compare/v1.6.1...v1.6.2) (2021-01-28)
+
+### Bug Fixes
+
+- fix analytics props sending ([fc8d04a](https://github.com/trip-a-trip/web-client-map/commit/fc8d04ac9dbde3e418a4ea6b5cc328c101ccf713))
+
 ### [1.6.1](https://github.com/trip-a-trip/web-client-map/compare/v1.6.0...v1.6.1) (2021-01-28)
 
 ## [1.6.0](https://github.com/trip-a-trip/web-client-map/compare/v1.5.0...v1.6.0) (2021-01-28)
