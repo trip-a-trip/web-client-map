@@ -1,20 +1,54 @@
 <script>
-  import TiInfoLargeOutline from 'svelte-icons/ti/TiInfoLargeOutline.svelte'
+  import { createEventDispatcher } from 'svelte';
+  import TiInfoLargeOutline from 'svelte-icons/ti/TiInfoLargeOutline.svelte';
 
   import Card from './components/Card.svelte';
   import Link from './components/Link.svelte';
   import RoundButton from './components/RoundButton.svelte';
 
-  let infoCardShown = false;
+  export let isOpen = false;
+
+  const dispatch = createEventDispatcher();
 
   function openInfoCard() {
-    infoCardShown = true;
+    dispatch('open');
   }
 
   function closeInfoCard() {
-    infoCardShown = false;
+    dispatch('close');
   }
 </script>
+
+{#if isOpen}
+  <section class="info">
+    <Card closeable on:close={closeInfoCard}>
+      <p>Привет. Я — Игорь, и я очень люблю еду.</p>
+      <p>
+        Все заведения, где хорошо — на этой карте. У заведений нет рейтинга, но
+        некоторые из них помечены эмодзи:
+      </p>
+
+      <ul>
+        <li>😍 — эмейзинг место</li>
+        <li>💸 — дороговато, но без жести</li>
+      </ul>
+
+      <p>
+        Ещё, этим сервисом можно пользоваться через
+        <Link newTab href="https://t.me/trip_trip_robot">телеграм-бота</Link>.
+      </p>
+
+      <p>
+        <Link newTab href="https://t.me/igorkamyshev">Пиши фидбеки</Link>,
+        рассказывай друзьям, ешь вкусно.
+      </p>
+    </Card>
+  </section>
+{/if}
+
+<section class="controls">
+  <RoundButton on:click={openInfoCard}><TiInfoLargeOutline /></RoundButton>
+</section>
 
 <style>
   .controls {
@@ -51,34 +85,3 @@
     list-style-type: none;
   }
 </style>
-
-{#if infoCardShown}
-  <section class="info">
-    <Card closeable on:close={closeInfoCard}>
-      <p>Привет. Я — Игорь, и я очень люблю еду.</p>
-      <p>
-        Все заведения, где хорошо — на этой карте. У заведений нет рейтинга, но
-        некоторые из них помечены эмодзи:
-      </p>
-
-      <ul>
-        <li>😍 — эмейзинг место</li>
-        <li>💸 — дороговато, но без жести</li>
-      </ul>
-
-      <p>
-        Ещё, этим сервисом можно пользоваться через
-        <Link newTab href="https://t.me/trip_trip_robot">телеграм-бота</Link>.
-      </p>
-
-      <p>
-        <Link newTab href="https://t.me/igorkamyshev">Пиши фидбеки</Link>,
-        рассказывай друзьям, ешь вкусно.
-      </p>
-    </Card>
-  </section>
-{/if}
-
-<section class="controls">
-  <RoundButton on:click={openInfoCard}><TiInfoLargeOutline /></RoundButton>
-</section>

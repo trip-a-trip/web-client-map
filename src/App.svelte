@@ -6,6 +6,9 @@
     $selectedVenue as selectedVenue,
     $showOnlyAmazing as showOnlyAmazing,
     $hideExpensive as hideExpensive,
+    $infoCardOpen as infoCardOpen,
+    openInfoCard,
+    closeInfoCard,
     selectVenue,
     unselectVenue,
     fetchVenuesFx,
@@ -41,7 +44,11 @@
 
   <Venue on:close={unselectVenue} item={$selectedVenue} />
 
-  <Info />
+  <Info
+    isOpen={$infoCardOpen}
+    on:open={openInfoCard}
+    on:close={closeInfoCard}
+  />
 </main>
 
 <style>
