@@ -49,6 +49,7 @@
     "md5": "^2.3.0",
     "postcss": "^7.0.32",
     "postcss-100vh-fix": "^0.1.1",
+    "posthtml": "^0.15.1",
     "prettier": "^2.0.4",
     "prettier-plugin-svelte": "^1.2.0",
     "rollup": "^2.26.9",

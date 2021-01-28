@@ -13,6 +13,8 @@ import progress from 'rollup-plugin-progress';
 import sveltePreprocessPostcss from 'svelte-preprocess-postcss';
 import md5 from 'md5';
 
+import inject from './bundle/inject-plugin';
+
 const PRODUCTION = !process.env.ROLLUP_WATCH;
 const DEVELOPMENT = !PRODUCTION;
 
@@ -65,6 +67,16 @@ export default {
         targets: [DIST],
       }),
     PRODUCTION && terser(),
+    inject({
+      scripts: [
+        {
+          src: 'https://plausible.io/js/plausible.js',
+          'data-domain': 'eat.kamyshev.me',
+          async: true,
+          defer: true,
+        },
+      ],
+    }),
   ],
   watch: {
     clearScreen: false,
