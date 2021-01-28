@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/trip-a-trip/web-client-map/compare/v1.4.0...v1.5.0) (2021-01-28)
+
+### Features
+
+- add analytics ([30dc1e4](https://github.com/trip-a-trip/web-client-map/commit/30dc1e4d2012f9720482e1403913b366fdf76e17))
+
 ## [1.4.0](https://github.com/trip-a-trip/web-client-map/compare/v1.3.2...v1.4.0) (2021-01-27)
 
 ### Features
