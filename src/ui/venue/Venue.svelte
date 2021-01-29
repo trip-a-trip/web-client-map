@@ -22,7 +22,7 @@
 
   @media (max-width: 768px) {
     article {
-      top: calc(106px + (2 * var(--space)));
+      top: calc(142px + (2 * var(--space)));
       width: calc(100vw - (2 * var(--space)));
     }
   }
