@@ -9,7 +9,7 @@ import { sendEvent } from './sendEvent';
 openInfoCard.watch(() => sendEvent('info-open'));
 
 enableAmazingFilter.watch(() =>
-  sendEvent('filter-enable', { filter: 'amazing-filter' }),
+  sendEvent('filter-enable', { filter: 'amazing' }),
 );
 
 enableHideExpensiveFilter.watch(() =>
