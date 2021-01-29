@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.3](https://github.com/trip-a-trip/web-client-map/compare/v1.6.2...v1.6.3) (2021-01-29)
+
+### Bug Fixes
+
+- **analytics:** rename filter name ([1cfc1ad](https://github.com/trip-a-trip/web-client-map/commit/1cfc1ad84e3f1c4a205fa03f83294c9ee5aad54d))
+
 ### [1.6.2](https://github.com/trip-a-trip/web-client-map/compare/v1.6.1...v1.6.2) (2021-01-28)
 
 ### Bug Fixes
