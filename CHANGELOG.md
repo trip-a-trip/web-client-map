@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.4](https://github.com/trip-a-trip/web-client-map/compare/v1.6.3...v1.6.4) (2021-01-29)
+
+### Bug Fixes
+
+- fix layout in header ([c286770](https://github.com/trip-a-trip/web-client-map/commit/c286770386ffd3d2ce83a05a9773a7f5cc23c9fa))
+
 ### [1.6.3](https://github.com/trip-a-trip/web-client-map/compare/v1.6.2...v1.6.3) (2021-01-29)
 
 ### Bug Fixes
