@@ -51,6 +51,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["commitizen", "npm:4.2.1"],
             ["cz-conventional-changelog", "npm:3.3.0"],
             ["effector", "npm:21.7.5"],
+            ["effector-storage", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:4.2.0"],
             ["eslint", "npm:6.8.0"],
             ["eslint-config-airbnb-base", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:14.2.0"],
             ["eslint-config-prettier", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:6.11.0"],
@@ -3596,6 +3597,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/effector-npm-21.7.5-2767772d4b-af5927f39b.zip/node_modules/effector/",
           "packageDependencies": [
             ["effector", "npm:21.7.5"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["effector-storage", [
+        ["npm:4.2.0", {
+          "packageLocation": "./.yarn/cache/effector-storage-npm-4.2.0-7218104b15-71c295d793.zip/node_modules/effector-storage/",
+          "packageDependencies": [
+            ["effector-storage", "npm:4.2.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:4.2.0", {
+          "packageLocation": "./.yarn/$$virtual/effector-storage-virtual-815efb7372/0/cache/effector-storage-npm-4.2.0-7218104b15-71c295d793.zip/node_modules/effector-storage/",
+          "packageDependencies": [
+            ["effector-storage", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:4.2.0"],
+            ["@types/effector", null],
+            ["effector", "npm:21.7.5"]
+          ],
+          "packagePeers": [
+            "@types/effector",
+            "effector"
           ],
           "linkType": "HARD",
         }]
@@ -11297,6 +11320,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["commitizen", "npm:4.2.1"],
             ["cz-conventional-changelog", "npm:3.3.0"],
             ["effector", "npm:21.7.5"],
+            ["effector-storage", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:4.2.0"],
             ["eslint", "npm:6.8.0"],
             ["eslint-config-airbnb-base", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:14.2.0"],
             ["eslint-config-prettier", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:6.11.0"],

@@ -2,7 +2,7 @@ import {
   enableAmazingFilter,
   enableHideExpensiveFilter,
   openInfoCard,
-  selectVenue,
+  $selectedVenue,
 } from '../store';
 import { sendEvent } from './sendEvent';
 
@@ -16,6 +16,8 @@ enableHideExpensiveFilter.watch(() =>
   sendEvent('filter-enable', { filter: 'expensive' }),
 );
 
-selectVenue.watch((venue) =>
-  sendEvent('venue-select', { name: venue.name, id: venue.id }),
-);
+$selectedVenue.watch((venue) => {
+  if (venue) {
+    sendEvent('venue-select', { name: venue.name, id: venue.id });
+  }
+});

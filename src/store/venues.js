@@ -36,4 +36,4 @@ const $venues = combine({
     .filter((item) => !filters.hideExpensive || !item.isExpensive),
 );
 
-export { fetchVenuesFx, $venues };
+export { fetchVenuesFx, $venues, $allVenues };

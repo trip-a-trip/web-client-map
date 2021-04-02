@@ -3038,6 +3038,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"effector-storage@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "effector-storage@npm:4.2.0"
+  peerDependencies:
+    effector: ^21.0.0
+  checksum: 71c295d793f512ac56454998c7f46975124f969d82e4a9c466710a44537cfbdf52ea6966c1755fdf1e0d08beb472def65a3959d1e4e12d6f45bda20848396207
+  languageName: node
+  linkType: hard
+
 "effector@npm:^21.7.5":
   version: 21.7.5
   resolution: "effector@npm:21.7.5"
@@ -9845,6 +9854,7 @@ fsevents@~2.1.2:
     commitizen: ^4.0.4
     cz-conventional-changelog: ^3.1.0
     effector: ^21.7.5
+    effector-storage: ^4.2.0
     eslint: ^6.8.0
     eslint-config-airbnb-base: ^14.1.0
     eslint-config-prettier: ^6.10.1
