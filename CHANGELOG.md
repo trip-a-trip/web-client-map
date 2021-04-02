@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/trip-a-trip/web-client-map/compare/v1.6.4...v1.7.0) (2021-04-02)
+
+### Features
+
+- store selected venue in url ([8bef3b5](https://github.com/trip-a-trip/web-client-map/commit/8bef3b5141e9068a84e2093909accabf4f3b2da9))
+
 ### [1.6.4](https://github.com/trip-a-trip/web-client-map/compare/v1.6.3...v1.6.4) (2021-01-29)
 
 ### Bug Fixes
