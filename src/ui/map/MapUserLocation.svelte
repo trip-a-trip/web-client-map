@@ -30,14 +30,13 @@
     top: -5px;
     left: -5px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 30px;
     height: 30px;
+    color: white;
     background-color: var(--purple_800);
     border: white 3px solid;
     border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
   }
 </style>
