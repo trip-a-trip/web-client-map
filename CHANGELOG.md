@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/trip-a-trip/web-client-map/compare/v1.7.0...v1.8.0) (2021-04-19)
+
+### Features
+
+- add user marker on map ([fbbad91](https://github.com/trip-a-trip/web-client-map/commit/fbbad91fc1338d85a1b4a7e5d652bd439932e6b9))
+
 ## [1.7.0](https://github.com/trip-a-trip/web-client-map/compare/v1.6.4...v1.7.0) (2021-04-02)
 
 ### Features
