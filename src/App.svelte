@@ -7,6 +7,7 @@
     $showOnlyAmazing as showOnlyAmazing,
     $hideExpensive as hideExpensive,
     $infoCardOpen as infoCardOpen,
+    $userLocation as userLocation,
     openInfoCard,
     closeInfoCard,
     selectVenue,
@@ -16,6 +17,7 @@
     disableAmazingFilter,
     enableHideExpensiveFilter,
     disableHideExpensiveFilter,
+    newUserLocation,
   } from './store';
   import Map from './ui/map/Map.svelte';
   import Header from './ui/Header.svelte';
@@ -40,7 +42,12 @@
     >
   </Header>
 
-  <Map on:select={({ detail }) => selectVenue(detail)} items={$venues} />
+  <Map
+    on:select={({ detail }) => selectVenue(detail)}
+    on:userPositionChange={({ detail }) => newUserLocation(detail)}
+    userLocation={$userLocation}
+    items={$venues}
+  />
 
   <Venue on:close={unselectVenue} item={$selectedVenue} />
 

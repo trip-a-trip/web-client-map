@@ -17,7 +17,7 @@
       navigator.geolocation.getCurrentPosition(resolve, reject),
     );
 
-    dispatch('newPosition', [coords.latitude, coords.longitude]);
+    dispatch('userPositionChange', [coords.latitude, coords.longitude]);
   }
 </script>
 

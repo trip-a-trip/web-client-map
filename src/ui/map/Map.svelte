@@ -7,12 +7,14 @@
 
   import MapControls from './MapControls.svelte';
   import MapMarkers from './MapMarkers.svelte';
+  import MapUserLocation from './MapUserLocation.svelte';
 
   const DEFAULT_COORDINATES = [35, 70];
   const DEFAULT_ZOOM = 3;
   const CLOSE_ZOOM = 14;
 
   export let items;
+  export let userLocation;
 
   let map;
 
@@ -26,7 +28,7 @@
       'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
     ).addTo(map);
 
-    map.on('click', () => dispatch('click')); 
+    map.on('click', () => dispatch('click'));
 
     return {
       destroy: () => {
@@ -34,7 +36,35 @@
       },
     };
   }
+
+  function setPosition(location) {
+    map.setView(location, CLOSE_ZOOM);
+  }
+
+  function handleUserPosition({ detail }) {
+    setPosition(detail, CLOSE_ZOOM);
+
+    dispatch('userPositionChange', detail);
+  }
 </script>
+
+<svelte:window on:resize={() => map?.invalidateSize()} />
+
+<div class="map" use:mapAction />
+
+<MapControls
+  on:zoomIn={() => map.zoomIn()}
+  on:zoomOut={() => map.zoomOut()}
+  on:userPositionChange={handleUserPosition}
+/>
+
+<MapMarkers {items} {map} on:select />
+
+<MapUserLocation
+  on:click={() => setPosition(userLocation)}
+  location={userLocation}
+  {map}
+/>
 
 <style>
   .map {
@@ -46,14 +76,3 @@
     height: 100vh;
   }
 </style>
-
-<svelte:window on:resize={() => map?.invalidateSize()} />
-
-<div class="map" use:mapAction />
-
-<MapControls
-  on:zoomIn={() => map.zoomIn()}
-  on:zoomOut={() => map.zoomOut()}
-  on:newPosition={({ detail }) => map.setView(detail, CLOSE_ZOOM)} />
-
-<MapMarkers {items} {map} on:select />
