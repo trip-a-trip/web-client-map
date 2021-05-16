@@ -70,7 +70,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["posthtml", "npm:0.15.1"],
             ["prettier", "npm:2.1.1"],
             ["prettier-plugin-svelte", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:1.2.0"],
-            ["redaxios", "npm:0.3.0"],
             ["rollup", "npm:2.26.9"],
             ["rollup-plugin-cleaner", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:1.0.0"],
             ["rollup-plugin-livereload", "npm:2.0.0"],
@@ -8973,15 +8972,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["redaxios", [
-        ["npm:0.3.0", {
-          "packageLocation": "./.yarn/cache/redaxios-npm-0.3.0-cc96c84e77-c09036857e.zip/node_modules/redaxios/",
-          "packageDependencies": [
-            ["redaxios", "npm:0.3.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["redent", [
         ["npm:1.0.0", {
           "packageLocation": "./.yarn/cache/redent-npm-1.0.0-b4da60611f-961d06c069.zip/node_modules/redent/",
@@ -11339,7 +11329,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["posthtml", "npm:0.15.1"],
             ["prettier", "npm:2.1.1"],
             ["prettier-plugin-svelte", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:1.2.0"],
-            ["redaxios", "npm:0.3.0"],
             ["rollup", "npm:2.26.9"],
             ["rollup-plugin-cleaner", "virtual:35a3d58d59024f6b65cdcd889d697153048fd91d718cf6b2c2db23aa3ffbd590e6d811517477e4fb7f234de042dcb8dac81962c1aa05b3616add03362a2abf35#npm:1.0.0"],
             ["rollup-plugin-livereload", "npm:2.0.0"],

@@ -1,31 +1,9 @@
-import { createEffect, restore, guard, combine } from 'effector';
-import axios from 'redaxios';
+import { createStore, combine } from 'effector';
 
 import { $filters } from './filters';
+import { allVenues } from './data';
 
-const REFETCH_THRESHOLD = 5;
-
-const wait = async (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
-const fetchVenuesFx = createEffect({
-  handler: async ({ attempt = 0 } = {}) => {
-    await wait(attempt * 1000);
-
-    const { data } = await axios.get('https://eat.kamyshev.me/v1/venue/list');
-
-    return data;
-  },
-});
-
-guard({
-  source: fetchVenuesFx.fail,
-  filter: ({ params }) => params?.attempt <= REFETCH_THRESHOLD,
-  target: fetchVenuesFx.prepend(({ params }) => ({
-    attempt: (params?.attempt ?? 0) + 1,
-  })),
-});
-
-const $allVenues = restore(fetchVenuesFx, []);
+const $allVenues = createStore(allVenues);
 
 const $venues = combine({
   venues: $allVenues,
@@ -36,4 +14,4 @@ const $venues = combine({
     .filter((item) => !filters.hideExpensive || !item.isExpensive),
 );
 
-export { fetchVenuesFx, $venues, $allVenues };
+export { $venues, $allVenues };

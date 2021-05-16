@@ -7773,13 +7773,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"redaxios@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "redaxios@npm:0.3.0"
-  checksum: c09036857e942361e20f34080dd08485dd044f69c85c7a8d72d634c97797707a551b4ff7e93ad1051a62931a18ea106c02673bf045815f46808fd48bbdf5e1f1
-  languageName: node
-  linkType: hard
-
 "redent@npm:^1.0.0":
   version: 1.0.0
   resolution: "redent@npm:1.0.0"
@@ -9873,7 +9866,6 @@ fsevents@~2.1.2:
     posthtml: ^0.15.1
     prettier: ^2.0.4
     prettier-plugin-svelte: ^1.2.0
-    redaxios: ^0.3.0
     rollup: ^2.26.9
     rollup-plugin-cleaner: ^1.0.0
     rollup-plugin-livereload: ^2.0.0

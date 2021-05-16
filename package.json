@@ -19,7 +19,6 @@
     "effector-storage": "^4.2.0",
     "leaflet": "^1.6.0",
     "leaflet.markercluster": "^1.4.1",
-    "redaxios": "^0.3.0",
     "svelte": "^3.24.1",
     "svelte-icons": "^2.1.0"
   },

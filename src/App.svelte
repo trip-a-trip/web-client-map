@@ -1,6 +1,4 @@
 <script>
-  import { onMount } from 'svelte';
-
   import {
     $venues as venues,
     $selectedVenue as selectedVenue,
@@ -12,7 +10,6 @@
     closeInfoCard,
     selectVenue,
     unselectVenue,
-    fetchVenuesFx,
     enableAmazingFilter,
     disableAmazingFilter,
     enableHideExpensiveFilter,
@@ -24,8 +21,6 @@
   import Venue from './ui/venue/Venue.svelte';
   import Switch from './ui/components/Switch.svelte';
   import Info from './ui/Info.svelte';
-
-  onMount(fetchVenuesFx);
 </script>
 
 <main>
